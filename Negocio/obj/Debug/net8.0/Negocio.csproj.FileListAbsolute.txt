@@ -1,0 +1,16 @@
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\bin\Debug\net8.0\Negocio.deps.json
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\bin\Debug\net8.0\Negocio.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\bin\Debug\net8.0\Negocio.pdb
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\bin\Debug\net8.0\Dados.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\bin\Debug\net8.0\Dados.pdb
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\bin\Debug\net8.0\Dados.dll.config
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.csproj.AssemblyReference.cache
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.AssemblyInfoInputs.cache
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.AssemblyInfo.cs
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.csproj.Up2Date
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\refint\Negocio.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.pdb
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\ref\Negocio.dll

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Apresentação</id>
+    <version>1.0.0</version>
+    <authors>Apresentação</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.runtimeconfig.json" target="lib\net8.0-windows7.0\Apresentação.runtimeconfig.json" />
+    <file src="C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.dll" target="lib\net8.0-windows7.0\Apresentação.dll" />
+  </files>
+</package>
