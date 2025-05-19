@@ -18,14 +18,12 @@ namespace Apresentação
         {
             InitializeComponent();
             _denunciaService = new DenunciaService();
-            //ConfiguraDataGridViewMensagem();
-            //ConfiguraDataGridViewResposta();
+            dgDenuncia.ColumnCount = 5;
         }
 
         private void ConfiguraDataGridViewMensagem()
         {
             // Configuração do DataGridView em um método separado
-            dgDenuncia.ColumnCount = 5;
             dgDenuncia.AutoGenerateColumns = false;
             dgDenuncia.Columns[0].Width = 75;
             dgDenuncia.Columns[0].HeaderText = "ID";

@@ -147,7 +147,7 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(770, 147);
+            txtId.Location = new Point(833, 173);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(125, 27);

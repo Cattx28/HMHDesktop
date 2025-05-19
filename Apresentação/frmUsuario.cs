@@ -172,7 +172,7 @@ namespace Apresentação
             {
                 MessageBox.Show("Por favor, insira um número válido.");
             }
-           email = txtEmail.Text;
+            email = txtEmail.Text;
             senha = txtSenha.Text;
 
             usuario.nome = nome;
@@ -217,7 +217,7 @@ namespace Apresentação
             else*/
             if (modo == 2)
             {
-                resultado = _usuarioService.Update(id,nome, idade, email, senha);
+                resultado = _usuarioService.Update(id, nome, idade, email, senha);
                 if (resultado == "SUCESSO")
                 {
                     msg = "USUÁRIO atualizado com sucesso!";

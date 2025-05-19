@@ -14,3 +14,4 @@ C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.dll
 C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\refint\Negocio.dll
 C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.pdb
 C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\ref\Negocio.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Negocio\obj\Debug\net8.0\Negocio.sourcelink.json

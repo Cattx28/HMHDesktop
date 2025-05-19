@@ -49,6 +49,9 @@
             btnEditar = new Button();
             btnSalvar = new Button();
             btnVoltar = new Button();
+            btnAdm = new Button();
+            btnMod = new Button();
+            btnTornarAdm = new Button();
             ((System.ComponentModel.ISupportInitialize)dgModerador).BeginInit();
             grpDados.SuspendLayout();
             SuspendLayout();
@@ -82,7 +85,7 @@
             dgModerador.DefaultCellStyle = dataGridViewCellStyle3;
             dgModerador.EnableHeadersVisualStyles = false;
             dgModerador.GridColor = Color.FromArgb(208, 226, 241);
-            dgModerador.Location = new Point(213, 291);
+            dgModerador.Location = new Point(213, 350);
             dgModerador.Name = "dgModerador";
             dgModerador.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -95,7 +98,7 @@
             dgModerador.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgModerador.RowHeadersVisible = false;
             dgModerador.RowHeadersWidth = 51;
-            dgModerador.Size = new Size(998, 338);
+            dgModerador.Size = new Size(998, 279);
             dgModerador.TabIndex = 0;
             dgModerador.SelectionChanged += dgModerador_SelectionChanged;
             // 
@@ -246,7 +249,7 @@
             btnExcluir.FlatStyle = FlatStyle.Popup;
             btnExcluir.Font = new Font("Segoe UI Semilight", 12F);
             btnExcluir.ForeColor = Color.FromArgb(226, 239, 239);
-            btnExcluir.Location = new Point(385, 644);
+            btnExcluir.Location = new Point(373, 644);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(135, 55);
             btnExcluir.TabIndex = 2;
@@ -260,7 +263,7 @@
             btnEditar.FlatStyle = FlatStyle.Popup;
             btnEditar.Font = new Font("Segoe UI Semilight", 12F);
             btnEditar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnEditar.Location = new Point(549, 644);
+            btnEditar.Location = new Point(526, 644);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(135, 55);
             btnEditar.TabIndex = 3;
@@ -274,7 +277,7 @@
             btnSalvar.FlatStyle = FlatStyle.Popup;
             btnSalvar.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnSalvar.Location = new Point(714, 644);
+            btnSalvar.Location = new Point(679, 644);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(135, 55);
             btnSalvar.TabIndex = 4;
@@ -297,12 +300,57 @@
             btnVoltar.UseVisualStyleBackColor = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // btnAdm
+            // 
+            btnAdm.BackColor = Color.FromArgb(108, 138, 182);
+            btnAdm.FlatStyle = FlatStyle.Popup;
+            btnAdm.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAdm.ForeColor = Color.FromArgb(226, 239, 239);
+            btnAdm.Location = new Point(212, 274);
+            btnAdm.Name = "btnAdm";
+            btnAdm.Size = new Size(296, 55);
+            btnAdm.TabIndex = 12;
+            btnAdm.Text = "ADMINISTRADORES";
+            btnAdm.UseVisualStyleBackColor = false;
+            btnAdm.Click += btnAdm_Click;
+            // 
+            // btnMod
+            // 
+            btnMod.BackColor = Color.FromArgb(108, 138, 182);
+            btnMod.FlatStyle = FlatStyle.Popup;
+            btnMod.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMod.ForeColor = Color.FromArgb(226, 239, 239);
+            btnMod.Location = new Point(544, 274);
+            btnMod.Name = "btnMod";
+            btnMod.Size = new Size(296, 55);
+            btnMod.TabIndex = 13;
+            btnMod.Text = "MODERADORES";
+            btnMod.UseVisualStyleBackColor = false;
+            btnMod.Click += btnMod_Click;
+            // 
+            // btnTornarAdm
+            // 
+            btnTornarAdm.BackColor = Color.FromArgb(108, 138, 182);
+            btnTornarAdm.FlatStyle = FlatStyle.Popup;
+            btnTornarAdm.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTornarAdm.ForeColor = Color.FromArgb(226, 239, 239);
+            btnTornarAdm.Location = new Point(832, 644);
+            btnTornarAdm.Name = "btnTornarAdm";
+            btnTornarAdm.Size = new Size(163, 55);
+            btnTornarAdm.TabIndex = 14;
+            btnTornarAdm.Text = "TORNAR ADM";
+            btnTornarAdm.UseVisualStyleBackColor = false;
+            btnTornarAdm.Click += btnTornarAdm_Click;
+            // 
             // frmModerador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(208, 226, 241);
             ClientSize = new Size(1240, 725);
+            Controls.Add(btnTornarAdm);
+            Controls.Add(btnMod);
+            Controls.Add(btnAdm);
             Controls.Add(btnVoltar);
             Controls.Add(btnSalvar);
             Controls.Add(btnEditar);
@@ -339,5 +387,8 @@
         private Label label2;
         private TextBox txtId;
         private Label label1;
+        private Button btnAdm;
+        private Button btnMod;
+        private Button btnTornarAdm;
     }
 }

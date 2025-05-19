@@ -58,18 +58,38 @@ namespace Negocio
         {
             return _repository.getAll();
         }
+
+        public DataTable getAllMod()
+        {
+            return _repository.getAllModerador();
+        }
+
+        public DataTable getAllAdm() 
+        { 
+         return _repository.getAllAdm();
+        }
+
         public DataTable filterById(int? idModerador)
         {
             return _repository.filterById(idModerador);
         }
 
+        public string TornarAdm(int idModerador)
+        {
+
+            return _repository.TornarAdm(idModerador);
+        }
+
         public bool acessar(string login, string senha)
         {
-            Console.WriteLine($"Tentando acessar: {login}");
             bool resultado = _repository.login(login, senha);
-            Console.WriteLine($"Resultado do login para {login}: {resultado}");
             return resultado;
         }
 
+        public bool adm(int adm)
+        {
+            bool resultado = _repository.adm(adm);
+            return resultado;
+        }
     }
 }

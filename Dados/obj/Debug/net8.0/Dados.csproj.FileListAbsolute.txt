@@ -11,3 +11,4 @@ C:\Users\Cat\Desktop\HelpMentalHealth\Dados\obj\Debug\net8.0\Dados.dll
 C:\Users\Cat\Desktop\HelpMentalHealth\Dados\obj\Debug\net8.0\refint\Dados.dll
 C:\Users\Cat\Desktop\HelpMentalHealth\Dados\obj\Debug\net8.0\Dados.pdb
 C:\Users\Cat\Desktop\HelpMentalHealth\Dados\obj\Debug\net8.0\ref\Dados.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Dados\obj\Debug\net8.0\Dados.sourcelink.json

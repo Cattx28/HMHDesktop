@@ -25,5 +25,8 @@
     <Compile Update="frmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

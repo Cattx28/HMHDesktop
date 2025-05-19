@@ -22,6 +22,8 @@ namespace Apresentação
             ConfiguraDataGridView();
             carregaGridView();
             Habilita();
+
+            
         }
 
         private void ConfiguraDataGridView()
@@ -237,7 +239,7 @@ namespace Apresentação
 
                 int.TryParse(txtId.Text, out int id);
 
-                    resultado = _moderadorService.Delete(id);
+                resultado = _moderadorService.Delete(id);
 
                 if (resultado == "SUCESSO")
                 {
@@ -259,5 +261,43 @@ namespace Apresentação
             Habilita();
         }
 
+        private void btnAdm_Click(object sender, EventArgs e)
+        {
+            dgModerador.DataSource = _moderadorService.getAllAdm();
+            dgModerador.Refresh();
+        }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+            dgModerador.DataSource = _moderadorService.getAllMod();
+            dgModerador.Refresh();
+        }
+
+        private void btnTornarAdm_Click(object sender, EventArgs e)
+        {
+            string resultado;
+            string msg;
+
+            DialogResult resposta;
+            resposta = MessageBox.Show("Confirma a ação?", "Aviso do sistema!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (resposta == DialogResult.OK)
+            {
+
+                int.TryParse(txtId.Text, out int id);
+
+                resultado = _moderadorService.TornarAdm(id);
+
+                if (resultado == "SUCESSO")
+                {
+                    msg = "O MODERADOR agora é ADMINISTRADOR!";
+                    carregaGridView();
+                }
+                else
+                {
+                    msg = "Falha ao tornar MODERADOR em ADMINISTRADOR!";
+                }
+                MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

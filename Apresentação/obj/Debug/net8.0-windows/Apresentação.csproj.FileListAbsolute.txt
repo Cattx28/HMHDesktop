@@ -67,3 +67,5 @@ C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Da
 C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Dados.dll.config
 C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Negocio.pdb
 C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\obj\Debug\net8.0-windows\Apresent.9B274EC2.Up2Date
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\FluentValidation.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\obj\Debug\net8.0-windows\Apresentação.sourcelink.json

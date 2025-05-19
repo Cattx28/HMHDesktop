@@ -128,6 +128,84 @@ namespace Dados
             return DtResultado;
         }
 
+        public DataTable getAllModerador()
+        {
+            DataTable DtResultado = new DataTable("mod");
+            try
+            {
+                Conexao.getConnection();
+                String selectSql = "SELECT * from Moderador " +
+                                    "WHERE adm = 0";
+
+                MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(selectSql, Conexao.SqlCon);
+
+                MySql.Data.MySqlClient.MySqlDataAdapter SqlData = new MySql.Data.MySqlClient.MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                Conexao.closeConnection();
+            }
+            return DtResultado;
+        }
+
+        public DataTable getAllAdm()
+        {
+            DataTable DtResultado = new DataTable("adm");
+            try
+            {
+                Conexao.getConnection();
+                String selectSql = "SELECT * from Moderador " +
+                                    "WHERE adm = 1";
+
+                MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(selectSql, Conexao.SqlCon);
+
+                MySql.Data.MySqlClient.MySqlDataAdapter SqlData = new MySql.Data.MySqlClient.MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                Conexao.closeConnection();
+            }
+            return DtResultado;
+        }
+
+        public string TornarAdm(int idModerador)
+        {
+            string resp = " ";
+
+            try
+            {
+                Conexao.getConnection();
+
+                string inativeSql = "UPDATE Moderador SET " +
+                                    "adm = 1 " +
+                                    "WHERE idModerador = @pId";
+                MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(inativeSql, Conexao.SqlCon);
+
+                SqlCmd.Parameters.AddWithValue("@pId", idModerador);
+
+                resp = SqlCmd.ExecuteNonQuery() == 1 ? "SUCESSO" : "FALHA";
+            }
+            catch (Exception ex)
+            {
+                resp = ex.Message;
+            }
+            finally
+            {
+                Conexao.closeConnection();
+            }
+            return resp;
+        }
+
         public DataTable filterById(int? pId)
         {
             DataTable DtResultado = new DataTable("moderador");
@@ -206,6 +284,9 @@ namespace Dados
             return logado;
         }
 
-
+        public bool adm(int adm) 
+        { 
+            if(adm == 0) { return false; } return true;
+        }
     }
 }
