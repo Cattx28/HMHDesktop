@@ -1,7 +1,10 @@
 ﻿using Dados;
+using FluentValidation.Results;
 using Negocio;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace Apresentação
 {
@@ -23,7 +26,7 @@ namespace Apresentação
             carregaGridView();
             Habilita();
 
-            
+
         }
 
         private void ConfiguraDataGridView()
@@ -174,10 +177,10 @@ namespace Apresentação
             moderador.senha = senha;
 
             //Validator
-            /*if (moderador != null)
+            if (moderador != null)
             {
-                FornecedorValidator validator = new FornecedorValidator();
-                ValidationResult results = validator.Validate(fornecedor);
+                ModeradorValidator validator = new ModeradorValidator();
+                FluentValidation.Results.ValidationResult results = validator.Validate(moderador);
                 IList<ValidationFailure> failures = results.Errors;
                 if (!results.IsValid)
                 {
@@ -188,7 +191,7 @@ namespace Apresentação
                         return;
                     }
                 }
-            }*/
+            }
 
 
             if (modo == 1)
@@ -297,6 +300,20 @@ namespace Apresentação
                     msg = "Falha ao tornar MODERADOR em ADMINISTRADOR!";
                 }
                 MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtNome_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
+            {
+                e.Cancel = true;
+                txtNome.Focus();
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProviderMod.SetError(txtNome, "");
             }
         }
     }

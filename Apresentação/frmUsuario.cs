@@ -1,4 +1,5 @@
 ﻿using Dados;
+using FluentValidation.Results;
 using Negocio;
 using System.Data;
 
@@ -181,10 +182,10 @@ namespace Apresentação
             usuario.senha = senha;
 
             //Validator
-            /*if (moderador != null)
+            if (usuario != null)
             {
-                FornecedorValidator validator = new FornecedorValidator();
-                ValidationResult results = validator.Validate(fornecedor);
+                UsuarioValidator validator = new UsuarioValidator();
+                ValidationResult results = validator.Validate(usuario);
                 IList<ValidationFailure> failures = results.Errors;
                 if (!results.IsValid)
                 {
@@ -195,7 +196,7 @@ namespace Apresentação
                         return;
                     }
                 }
-            }*/
+            }
 
 
             /*if (modo == 1)

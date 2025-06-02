@@ -2,6 +2,8 @@
 using Negocio;
 using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 using System.Data;
+using System.ComponentModel.DataAnnotations;
+using FluentValidation.Results;
 
 namespace Apresentação
 {
@@ -199,10 +201,10 @@ namespace Apresentação
             psicologo.senha = senha;
 
             //Validator
-            /*if (moderador != null)
+            if (psicologo != null)
             {
-                FornecedorValidator validator = new FornecedorValidator();
-                ValidationResult results = validator.Validate(fornecedor);
+                PsicologoValidator validator = new PsicologoValidator();
+                FluentValidation.Results.ValidationResult results = validator.Validate(psicologo);
                 IList<ValidationFailure> failures = results.Errors;
                 if (!results.IsValid)
                 {
@@ -213,7 +215,7 @@ namespace Apresentação
                         return;
                     }
                 }
-            }*/
+            }
 
 
             /*if (modo == 1)
