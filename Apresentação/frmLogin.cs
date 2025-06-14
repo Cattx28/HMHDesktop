@@ -22,30 +22,24 @@ namespace Apresentação
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (_moderadorService.acessar(txtLogin.Text, txtSenha.Text))
+            string login = txtLogin.Text;
+            string senha = txtSenha.Text;
+
+            if (_moderadorService.acessar(login, senha)) // Envia a senha em texto puro
             {
-                // 1. Definir que o login foi bem-sucedido
                 this.DialogResult = DialogResult.OK;
-
-                // 2. Criar e mostrar o formulário principal
                 var mainForm = new frmInicial();
-
-                // 3. Configurar para que quando fechar o mainForm, encerre a aplicação
                 mainForm.FormClosed += (s, args) => Application.Exit();
-
-                // 4. Fechar o login
                 this.Close();
-
-                // 5. Mostrar o mainForm
                 mainForm.Show();
             }
             else
             {
                 MessageBox.Show("Usuário e/ou senha incorretos!", "ERRO!",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                             MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-    }
+    
+        }
 }
 

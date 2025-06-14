@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ta32TqwOb6w=",
+  "dgSpecHash": "vGfIgIuPnhM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Negocio\\Negocio.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Cat\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Cat\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Cat\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\Cat\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

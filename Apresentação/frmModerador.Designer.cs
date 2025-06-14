@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModerador));
             dgModerador = new DataGridView();
             grpDados = new GroupBox();
@@ -53,52 +52,50 @@
             btnAdm = new Button();
             btnMod = new Button();
             btnTornarAdm = new Button();
-            errorProviderMod = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)dgModerador).BeginInit();
             grpDados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)errorProviderMod).BeginInit();
             SuspendLayout();
             // 
             // dgModerador
             // 
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(180, 202, 232);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(19, 62, 112);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(104, 160, 205);
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(19, 62, 112);
-            dgModerador.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(180, 202, 232);
+            dataGridViewCellStyle9.ForeColor = Color.FromArgb(19, 62, 112);
+            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(104, 160, 205);
+            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(19, 62, 112);
+            dgModerador.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             dgModerador.BackgroundColor = Color.FromArgb(208, 226, 241);
             dgModerador.BorderStyle = BorderStyle.None;
             dgModerador.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(38, 68, 102);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(30, 99, 159);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgModerador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(38, 68, 102);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle10.ForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(30, 99, 159);
+            dataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            dgModerador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             dgModerador.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(108, 138, 182);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(64, 118, 166);
-            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            dgModerador.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(108, 138, 182);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle11.ForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(64, 118, 166);
+            dataGridViewCellStyle11.SelectionForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            dgModerador.DefaultCellStyle = dataGridViewCellStyle11;
             dgModerador.EnableHeadersVisualStyles = false;
             dgModerador.GridColor = Color.FromArgb(208, 226, 241);
             dgModerador.Location = new Point(213, 350);
             dgModerador.Name = "dgModerador";
             dgModerador.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgModerador.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dgModerador.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dgModerador.RowHeadersVisible = false;
             dgModerador.RowHeadersWidth = 51;
             dgModerador.Size = new Size(998, 279);
@@ -178,9 +175,8 @@
             txtNome.ForeColor = Color.FromArgb(38, 68, 102);
             txtNome.Location = new Point(71, 66);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(792, 30);
+            txtNome.Size = new Size(825, 30);
             txtNome.TabIndex = 8;
-            txtNome.Validating += txtNome_Validating;
             // 
             // label2
             // 
@@ -346,10 +342,6 @@
             btnTornarAdm.UseVisualStyleBackColor = false;
             btnTornarAdm.Click += btnTornarAdm_Click;
             // 
-            // errorProviderMod
-            // 
-            errorProviderMod.ContainerControl = this;
-            // 
             // frmModerador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -374,7 +366,6 @@
             ((System.ComponentModel.ISupportInitialize)dgModerador).EndInit();
             grpDados.ResumeLayout(false);
             grpDados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)errorProviderMod).EndInit();
             ResumeLayout(false);
         }
 
@@ -399,6 +390,5 @@
         private Button btnAdm;
         private Button btnMod;
         private Button btnTornarAdm;
-        private ErrorProvider errorProviderMod;
     }
 }

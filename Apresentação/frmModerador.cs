@@ -3,6 +3,7 @@ using FluentValidation.Results;
 using Negocio;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Diagnostics;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
@@ -171,10 +172,11 @@ namespace Apresentação
             nome = txtNome.Text;
             email = txtEmail.Text;
             senha = txtSenha.Text;
+            string senhaHash = PasswordHasher.HashPassword(senha);
 
             moderador.nome = nome;
             moderador.email = email;
-            moderador.senha = senha;
+            moderador.senha = senhaHash;
 
             //Validator
             if (moderador != null)
@@ -196,7 +198,7 @@ namespace Apresentação
 
             if (modo == 1)
             {
-                resultado = _moderadorService.Update(null, nome, email, senha);
+                resultado = _moderadorService.Update(null, nome, email, senhaHash);
 
 
                 if (resultado == "SUCESSO")
@@ -212,7 +214,7 @@ namespace Apresentação
             }
             else if (modo == 2)
             {
-                resultado = _moderadorService.Update(id, nome, email, senha);
+                resultado = _moderadorService.Update(id, nome, email, senhaHash);
                 if (resultado == "SUCESSO")
                 {
                     msg = "MODERADOR atualizado com sucesso!";
@@ -300,20 +302,6 @@ namespace Apresentação
                     msg = "Falha ao tornar MODERADOR em ADMINISTRADOR!";
                 }
                 MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void txtNome_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtNome.Text))
-            {
-                e.Cancel = true;
-                txtNome.Focus();
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProviderMod.SetError(txtNome, "");
             }
         }
     }

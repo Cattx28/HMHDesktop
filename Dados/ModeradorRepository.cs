@@ -1,10 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.ConstrainedExecution;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
 namespace Dados
 {
@@ -244,8 +241,6 @@ namespace Dados
 
         public bool login(string login, string senha)
         {
-            bool logado = false;
-
             if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(senha))
             {
                 return false;
@@ -254,39 +249,40 @@ namespace Dados
             try
             {
                 Conexao.getConnection();
-
-                string loginSql = "SELECT * FROM Moderador WHERE (nome = @pLogin OR email = @pLogin) AND senha = @pSenha";
-
-                using (var SqlCmd = new MySqlCommand(loginSql, Conexao.SqlCon))
                 {
-                    SqlCmd.Parameters.AddWithValue("@pLogin", login);
-                    SqlCmd.Parameters.AddWithValue("@pSenha", senha); // Lembre-se de hash, se necessário
+                    // Busca apenas o hash armazenado
+                    string sql = "SELECT senha FROM Moderador WHERE nome = @pLogin OR email = @pLogin";
 
-                    using (var SqlDr = SqlCmd.ExecuteReader())
+                    string senhaHash = null;
+
+                    using (var cmd = new MySqlCommand(sql, Conexao.SqlCon))
                     {
-                        logado = SqlDr.HasRows;
+                        cmd.Parameters.AddWithValue("@pLogin", login);
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                senhaHash = reader.GetString("senha");
+                            }
+                        }
                     }
+
+                    // Verifica se encontrou o usuário e se a senha está correta
+                    return senhaHash != null && PasswordHasher.VerifyPassword(senha, senhaHash);
                 }
-            }
-            catch (InvalidOperationException ex)
-            {
-                Console.WriteLine("Erro de operação inválida: " + ex.Message);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro: " + ex.Message);
+                Console.WriteLine("Erro no login: " + ex.Message);
+                return false;
             }
-            finally
-            {
-                Conexao.closeConnection();
-            }
-
-            return logado;
         }
 
-        public bool adm(int adm) 
-        { 
-            if(adm == 0) { return false; } return true;
+        public bool adm(int adm)
+        {
+            if (adm == 0) { return false; }
+            return true;
         }
     }
 }
