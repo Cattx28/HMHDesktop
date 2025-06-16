@@ -17,7 +17,7 @@ namespace Negocio
             _repository = new UsuarioRepository();
         }
 
-        public string Update(int? id, string nome, int idade, string email, string senha)
+        public string Update(int? id, string nome, int idade, string email)
         {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
@@ -28,7 +28,6 @@ namespace Negocio
                 nome = nome,
                 idade = idade,
                 email = email,
-                senha = senha
             };
 
             if (id == null)

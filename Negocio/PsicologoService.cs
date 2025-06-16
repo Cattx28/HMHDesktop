@@ -17,7 +17,7 @@ namespace Negocio
             _repository = new PsicologoRepository();
         }
 
-        public string Update(int? id, string nome, string cpf, string regiao, string cidade, string email, string senha)
+        public string Update(int? id, string nome, string cpf, string regiao, string email)
         {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
@@ -28,9 +28,7 @@ namespace Negocio
                 nome = nome,
                 cpf = cpf,
                 regiao = regiao,
-                cidade = cidade,
                 email = email,
-                senha = senha
             };
 
             if (id == null)

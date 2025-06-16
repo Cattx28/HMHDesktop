@@ -19,17 +19,15 @@ namespace Dados
                 Conexao.getConnection();
 
                 string insertSql = "INSERT INTO Psicologo " +
-                                    "(nome, cpf, regiao, cidade, email, senha) " +
-                                    "VALUES (@pNome, @pCpf, @pRegiao, @pCidade, @pEmail, @pSenha)";
+                                    "(nome, cpf, regiao, email, senha) " +
+                                    "VALUES (@pNome, @pCpf, @pEstado, @pEmail)";
 
                 MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(insertSql, Conexao.SqlCon);
 
                 SqlCmd.Parameters.AddWithValue("@pNome", psicologo.nome);
                 SqlCmd.Parameters.AddWithValue("@pCpf", psicologo.cpf);
-                SqlCmd.Parameters.AddWithValue("@pRegiao", psicologo.regiao);
-                SqlCmd.Parameters.AddWithValue("@pCidade", psicologo.cidade);
+                SqlCmd.Parameters.AddWithValue("@pEstado", psicologo.regiao);
                 SqlCmd.Parameters.AddWithValue("@pEmail", psicologo.email);
-                SqlCmd.Parameters.AddWithValue("@pSenha", psicologo.senha);
 
                 resp = SqlCmd.ExecuteNonQuery() == 1 ? "SUCESSO" : "FALHA";
 
@@ -54,7 +52,7 @@ namespace Dados
                 Conexao.getConnection();
 
                 string updateSql = "UPDATE Psicologo SET " +
-                                    "nome = @pNome, cpf = @pCpf, regiao = @pRegiao, cidade = @pCidade, email = @pEmail, senha = @pSenha " +
+                                    "nome = @pNome, cpf = @pCpf, estado = @pEstado, email = @pEmail " +
                                     "WHERE idPsicologo = @pId";
 
                 MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(updateSql, Conexao.SqlCon);
@@ -62,10 +60,8 @@ namespace Dados
                 SqlCmd.Parameters.AddWithValue("@pId", psicologo.id);
                 SqlCmd.Parameters.AddWithValue("@pNome", psicologo.nome);
                 SqlCmd.Parameters.AddWithValue("@pCpf", psicologo.cpf);
-                SqlCmd.Parameters.AddWithValue("@pRegiao", psicologo.regiao);
-                SqlCmd.Parameters.AddWithValue("@pCidade", psicologo.cidade);
+                SqlCmd.Parameters.AddWithValue("@pEstado", psicologo.regiao);
                 SqlCmd.Parameters.AddWithValue("@pEmail", psicologo.email);
-                SqlCmd.Parameters.AddWithValue("@pSenha", psicologo.senha);
 
                 resp = SqlCmd.ExecuteNonQuery() == 1 ? "SUCESSO" : "FALHA";
             }

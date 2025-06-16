@@ -36,8 +36,8 @@ namespace Apresentação
             dgUsuario.Columns[1].HeaderText = "NOME";
             dgUsuario.Columns[1].DataPropertyName = "nome";
             dgUsuario.Columns[2].Width = 55;
-            dgUsuario.Columns[2].HeaderText = "IDADE";
-            dgUsuario.Columns[2].DataPropertyName = "idade";
+            dgUsuario.Columns[2].HeaderText = "FAIXA ETÁRIA";
+            dgUsuario.Columns[2].DataPropertyName = "faixaEtaria";
             dgUsuario.Columns[3].Width = 310;
             dgUsuario.Columns[3].HeaderText = "EMAIL";
             dgUsuario.Columns[3].DataPropertyName = "email";
@@ -113,7 +113,6 @@ namespace Apresentação
             txtNome.Text = Convert.ToString(dgUsuario.CurrentRow.Cells[1].Value);
             txtIdade.Text = Convert.ToString(dgUsuario.CurrentRow.Cells[2].Value);
             txtEmail.Text = Convert.ToString(dgUsuario.CurrentRow.Cells[3].Value);
-            txtSenha.Text = Convert.ToString(dgUsuario.CurrentRow.Cells[4].Value);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -218,7 +217,7 @@ namespace Apresentação
             else*/
             if (modo == 2)
             {
-                resultado = _usuarioService.Update(id, nome, idade, email, senha);
+                resultado = _usuarioService.Update(id, nome, idade, email);
                 if (resultado == "SUCESSO")
                 {
                     msg = "USUÁRIO atualizado com sucesso!";

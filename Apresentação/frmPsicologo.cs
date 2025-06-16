@@ -29,7 +29,7 @@ namespace Apresentação
         private void ConfiguraDataGridView()
         {
             // Configuração do DataGridView em um método separado
-            dgPsicologo.ColumnCount = 7;
+            dgPsicologo.ColumnCount = 5;
             dgPsicologo.AutoGenerateColumns = false;
             dgPsicologo.Columns[0].Width = 45;
             dgPsicologo.Columns[0].HeaderText = "ID";
@@ -41,17 +41,11 @@ namespace Apresentação
             dgPsicologo.Columns[2].HeaderText = "CPF";
             dgPsicologo.Columns[2].DataPropertyName = "cpf";
             dgPsicologo.Columns[3].Width = 65;
-            dgPsicologo.Columns[3].HeaderText = "REGIÃO";
-            dgPsicologo.Columns[3].DataPropertyName = "regiao";
-            dgPsicologo.Columns[4].Width = 150;
-            dgPsicologo.Columns[4].HeaderText = "CIDADE";
-            dgPsicologo.Columns[4].DataPropertyName = "cidade";
-            dgPsicologo.Columns[5].Width = 200;
-            dgPsicologo.Columns[5].HeaderText = "EMAIL";
-            dgPsicologo.Columns[5].DataPropertyName = "email";
-            dgPsicologo.Columns[6].Width = 100;
-            dgPsicologo.Columns[6].HeaderText = "SENHA";
-            dgPsicologo.Columns[6].DataPropertyName = "senha";
+            dgPsicologo.Columns[3].HeaderText = "ESTADO";
+            dgPsicologo.Columns[3].DataPropertyName = "estado";
+            dgPsicologo.Columns[4].Width = 200;
+            dgPsicologo.Columns[4].HeaderText = "EMAIL";
+            dgPsicologo.Columns[4].DataPropertyName = "email";
 
             dgPsicologo.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgPsicologo.AllowUserToAddRows = false;
@@ -67,9 +61,7 @@ namespace Apresentação
             txtNome?.Clear();
             txtCpf?.Clear();
             txtRegiao?.Clear();
-            txtCidade?.Clear();
             txtEmail?.Clear();
-            txtSenha?.Clear();
 
             txtNome?.Focus();
         }
@@ -123,9 +115,7 @@ namespace Apresentação
             txtNome.Text = Convert.ToString(dgPsicologo.CurrentRow.Cells[1].Value);
             txtCpf.Text = Convert.ToString(dgPsicologo.CurrentRow.Cells[2].Value);
             txtRegiao.Text = Convert.ToString(dgPsicologo.CurrentRow.Cells[3].Value);
-            txtCidade.Text = Convert.ToString(dgPsicologo.CurrentRow.Cells[4].Value);
-            txtEmail.Text = Convert.ToString(dgPsicologo.CurrentRow.Cells[5].Value);
-            txtSenha.Text = Convert.ToString(dgPsicologo.CurrentRow.Cells[6].Value);
+            txtEmail.Text = Convert.ToString(dgPsicologo.CurrentRow.Cells[4].Value);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -188,17 +178,13 @@ namespace Apresentação
 
             nome = txtNome.Text;
             email = txtEmail.Text;
-            senha = txtSenha.Text;
             cpf = txtCpf.Text;
             regiao = txtRegiao.Text;
-            cidade = txtCidade.Text;
 
             psicologo.nome = nome;
             psicologo.cpf = cpf;
             psicologo.regiao = regiao;
-            psicologo.cidade = cidade;
             psicologo.email = email;
-            psicologo.senha = senha;
 
             //Validator
             if (psicologo != null)
@@ -237,7 +223,7 @@ namespace Apresentação
             else*/
             //if (modo == 2)
             //{
-                resultado = _psicologoService.Update(id, nome, cpf, regiao, cidade, email, senha);
+                resultado = _psicologoService.Update(id, nome, cpf, regiao, email);
                 if (resultado == "SUCESSO")
                 {
                     msg = "PSICOLOGO atualizado com sucesso!";

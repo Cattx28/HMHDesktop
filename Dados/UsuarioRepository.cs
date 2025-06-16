@@ -22,14 +22,13 @@ namespace Dados
 
                 string insertSql = "INSERT INTO Usuario " +
                                     "(nome, idade, email, senha) " +
-                                    "VALUES (@pNome, @pIdade, @pEmail, @pSenha)";
+                                    "VALUES (@pNome, @pIdade, @pEmail )";
 
                 MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(insertSql, Conexao.SqlCon);
 
                 SqlCmd.Parameters.AddWithValue("@pNome", usuario.nome);
                 SqlCmd.Parameters.AddWithValue("@pIdade", usuario.idade);
                 SqlCmd.Parameters.AddWithValue("@pEmail", usuario.email);
-                SqlCmd.Parameters.AddWithValue("@pSenha", usuario.senha);
 
                 resp = SqlCmd.ExecuteNonQuery() == 1 ? "SUCESSO" : "FALHA";
 
@@ -53,7 +52,7 @@ namespace Dados
                 Conexao.getConnection();
 
                 string updateSql = "UPDATE Usuario SET " +
-                                    "nome = @pNome, idade = @pIdade, email = @pEmail, senha = @pSenha " +
+                                    "nome = @pNome, faixaEtaria = @pIdade, email = @pEmail, " +
                                     "WHERE idUsuario = @pId";
 
                 MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(updateSql, Conexao.SqlCon);
@@ -62,7 +61,6 @@ namespace Dados
                 SqlCmd.Parameters.AddWithValue("@pNome", usuario.nome);
                 SqlCmd.Parameters.AddWithValue("@pIdade", usuario.idade);
                 SqlCmd.Parameters.AddWithValue("@pEmail", usuario.email);
-                SqlCmd.Parameters.AddWithValue("@pSenha", usuario.senha);
 
                 resp = SqlCmd.ExecuteNonQuery() == 1 ? "SUCESSO" : "FALHA";
             }
