@@ -68,8 +68,30 @@ namespace Apresentação
             dgDenuncia.Columns[4].DataPropertyName = "psicologo";
 
         }
+
+        public void ConfiguraDataGridViewPostagem()
+        {
+            dgDenuncia.AutoGenerateColumns = false;
+            dgDenuncia.Columns[0].Width = 75;
+            dgDenuncia.Columns[0].HeaderText = "ID";
+            dgDenuncia.Columns[0].DataPropertyName = "idDenuncia_Postagem";
+            dgDenuncia.Columns[1].Width = 300;
+            dgDenuncia.Columns[1].HeaderText = "MOTIVO";
+            dgDenuncia.Columns[1].DataPropertyName = "motivo";
+            dgDenuncia.Columns[2].Width = 75;
+            dgDenuncia.Columns[2].HeaderText = "ID POSTAGEM";
+            dgDenuncia.Columns[2].DataPropertyName = "postagem";
+            dgDenuncia.Columns[3].Width = 170;
+            dgDenuncia.Columns[3].HeaderText = "TÌTULO";
+            dgDenuncia.Columns[3].DataPropertyName = "titulo";
+            dgDenuncia.Columns[4].Width = 75;
+            dgDenuncia.Columns[4].HeaderText = "ID AUTOR";
+            dgDenuncia.Columns[4].DataPropertyName = "autor";
+
+        }
+
         private void carregaGridViewMensagem()
-        { 
+        {
             dgDenuncia.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgDenuncia.AllowUserToAddRows = false;
             dgDenuncia.AllowUserToDeleteRows = false;
@@ -89,6 +111,19 @@ namespace Apresentação
             dgDenuncia.ReadOnly = true;
 
             dgDenuncia.DataSource = _denunciaService.getAllResposta();
+            dgDenuncia.Refresh();
+        }
+
+        private void carregaGridViewPostagens()
+
+        {
+            dgDenuncia.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgDenuncia.AllowUserToAddRows = false;
+            dgDenuncia.AllowUserToDeleteRows = false;
+            dgDenuncia.AllowUserToOrderColumns = true;
+            dgDenuncia.ReadOnly = true;
+
+            dgDenuncia.DataSource = _denunciaService.getAllPostagem();
             dgDenuncia.Refresh();
         }
 
@@ -149,14 +184,14 @@ namespace Apresentação
 
         private void btnMensagem_Click(object sender, EventArgs e)
         {
-           ConfiguraDataGridViewMensagem();
+            ConfiguraDataGridViewMensagem();
             modo = 1;
             carregaGridViewMensagem();
         }
 
         private void btnRespostas_Click(object sender, EventArgs e)
         {
-           ConfiguraDataGridViewResposta();
+            ConfiguraDataGridViewResposta();
             modo = 2;
             carregaGridViewResposta();
         }
@@ -199,6 +234,14 @@ namespace Apresentação
                     MessageBox.Show("Nenhum ID foi informado.");
                 }
             }
+        }
+
+
+        private void btnPostagens_Click(object sender, EventArgs e)
+        {
+            ConfiguraDataGridViewPostagem();
+            modo = 1;
+            carregaGridViewPostagens();
         }
     }
 }

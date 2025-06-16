@@ -114,6 +114,32 @@ namespace Dados
             return DtResultado;
         }
 
+        public DataTable getAllPostagens()
+        {
+            DataTable DtResultado = new DataTable("postagem");
+            try
+            {
+                Conexao.getConnection();
+                String selectSql = "SELECT * FROM Denuncia_Postagem " +
+                                   "JOIN Postagem " +
+                                   "ON Denuncia_Postagem.postagem = Postagem.idPostagem";
+
+                MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(selectSql, Conexao.SqlCon);
+
+                MySql.Data.MySqlClient.MySqlDataAdapter SqlData = new MySql.Data.MySqlClient.MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                Conexao.closeConnection();
+            }
+            return DtResultado;
+        }
+
         public DataTable filterByIdMensagem(int? pId)
         {
             DataTable DtResultado = new DataTable("mensagem");
@@ -165,6 +191,42 @@ namespace Dados
                 else
                 {
                     selectSql = "SELECT * FROM Resposta";
+                }
+
+                MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(selectSql, Conexao.SqlCon);
+
+                if (pId != null)
+                    SqlCmd.Parameters.AddWithValue("@pId", pId);
+
+                MySql.Data.MySqlClient.MySqlDataAdapter SqlData = new MySql.Data.MySqlClient.MySqlDataAdapter(SqlCmd);
+                SqlData.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            finally
+            {
+                Conexao.closeConnection();
+            }
+            return DtResultado;
+        }
+
+        public DataTable filterByIdPostagem(int? pId)
+        {
+            DataTable DtResultado = new DataTable("postagem");
+            string selectSql;
+            try
+            {
+                Conexao.getConnection();
+                if (pId != null)
+                {
+                    selectSql = "SELECT * FROM Postagem " +
+                                "WHERE idPostagem = @pId";
+                }
+                else
+                {
+                    selectSql = "SELECT * FROM Postagem";
                 }
 
                 MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(selectSql, Conexao.SqlCon);

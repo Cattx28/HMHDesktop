@@ -35,6 +35,11 @@ namespace Negocio
             return _repository.getAllResposta();
         }
 
+        public DataTable getAllPostagem()
+        {
+            return _repository.getAllPostagens();
+        }
+
         public DataTable filterByIdMensagem(int? idMensagem)
         {
             return _repository.filterByIdMensagem(idMensagem);
@@ -43,6 +48,11 @@ namespace Negocio
         public DataTable filterByIdResposta(int? idResposta)
         {
             return _repository.filterByIdResposta(idResposta);
+        }
+
+        public DataTable filterByIdPostagem(int? idPostagem)
+        {
+            return _repository.filterByIdPostagem(idPostagem);
         }
 
     }
