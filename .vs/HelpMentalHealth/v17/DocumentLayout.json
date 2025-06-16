@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\apresenta\u00E7\u00E3o\\frmpsicologo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmpsicologo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmpsicologo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmpsicologo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\apresenta\u00E7\u00E3o\\frmpsicologo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmpsicologo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\apresenta\u00E7\u00E3o\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -87,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Negocio\\UsuarioService.cs",
               "RelativeDocumentMoniker": "Negocio\\UsuarioService.cs",
@@ -99,18 +99,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "frmPsicologo.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmPsicologo.cs",
               "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmPsicologo.cs",
               "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmPsicologo.cs [Projeto]",
               "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmPsicologo.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T03:13:38.278Z"
+              "WhenOpened": "2025-06-16T03:13:38.278Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "frmPsicologo.cs",
               "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmPsicologo.cs",
               "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmPsicologo.cs",
@@ -122,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmUsuario.cs",
               "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmUsuario.cs",
@@ -135,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Dados\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Dados\\UsuarioRepository.cs",
@@ -147,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PsicologoService.cs",
               "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Negocio\\PsicologoService.cs",
               "RelativeDocumentMoniker": "Negocio\\PsicologoService.cs",
@@ -159,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PsicologoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Dados\\PsicologoRepository.cs",
               "RelativeDocumentMoniker": "Dados\\PsicologoRepository.cs",
