@@ -35,13 +35,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPsicologo));
             dgPsicologo = new DataGridView();
             grpDados = new GroupBox();
-            txtCidade = new TextBox();
-            label6 = new Label();
             txtRegiao = new TextBox();
             label7 = new Label();
             txtCpf = new MaskedTextBox();
-            txtSenha = new TextBox();
-            label5 = new Label();
             txtEmail = new TextBox();
             label4 = new Label();
             label3 = new Label();
@@ -89,7 +85,7 @@
             dgPsicologo.DefaultCellStyle = dataGridViewCellStyle3;
             dgPsicologo.EnableHeadersVisualStyles = false;
             dgPsicologo.GridColor = Color.FromArgb(208, 226, 241);
-            dgPsicologo.Location = new Point(213, 308);
+            dgPsicologo.Location = new Point(213, 270);
             dgPsicologo.Name = "dgPsicologo";
             dgPsicologo.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -102,20 +98,16 @@
             dgPsicologo.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgPsicologo.RowHeadersVisible = false;
             dgPsicologo.RowHeadersWidth = 51;
-            dgPsicologo.Size = new Size(998, 321);
+            dgPsicologo.Size = new Size(998, 359);
             dgPsicologo.TabIndex = 0;
             dgPsicologo.SelectionChanged += dgPsicologo_SelectionChanged;
             // 
             // grpDados
             // 
             grpDados.BackColor = Color.FromArgb(208, 226, 241);
-            grpDados.Controls.Add(txtCidade);
-            grpDados.Controls.Add(label6);
             grpDados.Controls.Add(txtRegiao);
             grpDados.Controls.Add(label7);
             grpDados.Controls.Add(txtCpf);
-            grpDados.Controls.Add(txtSenha);
-            grpDados.Controls.Add(label5);
             grpDados.Controls.Add(txtEmail);
             grpDados.Controls.Add(label4);
             grpDados.Controls.Add(label3);
@@ -126,32 +118,9 @@
             grpDados.FlatStyle = FlatStyle.System;
             grpDados.Location = new Point(212, 94);
             grpDados.Name = "grpDados";
-            grpDados.Size = new Size(908, 198);
+            grpDados.Size = new Size(908, 155);
             grpDados.TabIndex = 1;
             grpDados.TabStop = false;
-            // 
-            // txtCidade
-            // 
-            txtCidade.BackColor = Color.FromArgb(208, 226, 241);
-            txtCidade.BorderStyle = BorderStyle.FixedSingle;
-            txtCidade.Cursor = Cursors.IBeam;
-            txtCidade.Font = new Font("Segoe UI Semilight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCidade.ForeColor = Color.FromArgb(38, 68, 102);
-            txtCidade.Location = new Point(298, 111);
-            txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(599, 30);
-            txtCidade.TabIndex = 33;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11F);
-            label6.ForeColor = Color.FromArgb(38, 68, 102);
-            label6.Location = new Point(219, 112);
-            label6.Name = "label6";
-            label6.Size = new Size(81, 25);
-            label6.TabIndex = 32;
-            label6.Text = "CIDADE:";
             // 
             // txtRegiao
             // 
@@ -189,29 +158,6 @@
             txtCpf.Size = new Size(124, 30);
             txtCpf.TabIndex = 29;
             // 
-            // txtSenha
-            // 
-            txtSenha.BackColor = Color.FromArgb(208, 226, 241);
-            txtSenha.BorderStyle = BorderStyle.FixedSingle;
-            txtSenha.Cursor = Cursors.IBeam;
-            txtSenha.Font = new Font("Segoe UI Semilight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSenha.ForeColor = Color.FromArgb(38, 68, 102);
-            txtSenha.Location = new Point(645, 158);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(252, 30);
-            txtSenha.TabIndex = 28;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11F);
-            label5.ForeColor = Color.FromArgb(38, 68, 102);
-            label5.Location = new Point(572, 159);
-            label5.Name = "label5";
-            label5.Size = new Size(75, 25);
-            label5.TabIndex = 27;
-            label5.Text = "SENHA:";
-            // 
             // txtEmail
             // 
             txtEmail.BackColor = Color.FromArgb(208, 226, 241);
@@ -219,9 +165,9 @@
             txtEmail.Cursor = Cursors.IBeam;
             txtEmail.Font = new Font("Segoe UI Semilight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.ForeColor = Color.FromArgb(38, 68, 102);
-            txtEmail.Location = new Point(72, 157);
+            txtEmail.Location = new Point(281, 111);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(494, 30);
+            txtEmail.Size = new Size(616, 30);
             txtEmail.TabIndex = 26;
             // 
             // label4
@@ -229,7 +175,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
             label4.ForeColor = Color.FromArgb(38, 68, 102);
-            label4.Location = new Point(3, 158);
+            label4.Location = new Point(209, 113);
             label4.Name = "label4";
             label4.Size = new Size(69, 25);
             label4.TabIndex = 25;
@@ -302,7 +248,7 @@
             btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar.ForeColor = Color.FromArgb(226, 239, 239);
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
-            btnBuscar.Location = new Point(1139, 239);
+            btnBuscar.Location = new Point(1139, 202);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(71, 47);
             btnBuscar.TabIndex = 7;
@@ -429,8 +375,6 @@
         private Button btnSalvar;
         private Button btnVoltar;
         private Button btnBuscar;
-        private TextBox txtSenha;
-        private Label label5;
         private TextBox txtEmail;
         private Label label4;
         private Label label3;
@@ -439,8 +383,6 @@
         private TextBox txtId;
         private Label label1;
         private MaskedTextBox txtCpf;
-        private TextBox txtCidade;
-        private Label label6;
         private TextBox txtRegiao;
         private Label label7;
         private Button btnMostraInativos;
