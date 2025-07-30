@@ -95,7 +95,7 @@
             dgModerador.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgModerador.RowHeadersVisible = false;
             dgModerador.RowHeadersWidth = 51;
-            dgModerador.Size = new Size(998, 380);
+            dgModerador.Size = new Size(998, 386);
             dgModerador.TabIndex = 0;
             dgModerador.SelectionChanged += dgModerador_SelectionChanged;
             // 
@@ -213,58 +213,58 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.BackColor = Color.FromArgb(108, 138, 182);
+            btnBuscar.BackColor = Color.FromArgb(19, 62, 112);
             btnBuscar.BackgroundImageLayout = ImageLayout.Center;
             btnBuscar.FlatStyle = FlatStyle.Popup;
             btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBuscar.ForeColor = Color.FromArgb(226, 239, 239);
+            btnBuscar.ForeColor = Color.FromArgb(19, 62, 112);
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
             btnBuscar.Location = new Point(1140, 196);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(71, 47);
+            btnBuscar.Size = new Size(71, 50);
             btnBuscar.TabIndex = 11;
             btnBuscar.UseVisualStyleBackColor = false;
             btnBuscar.Click += btnBuscar_Click;
             // 
             // btnAdicionar
             // 
-            btnAdicionar.BackColor = Color.FromArgb(108, 138, 182);
+            btnAdicionar.BackColor = Color.Green;
             btnAdicionar.FlatStyle = FlatStyle.Popup;
             btnAdicionar.Font = new Font("Segoe UI Semilight", 12F);
             btnAdicionar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnAdicionar.Location = new Point(220, 644);
+            btnAdicionar.Location = new Point(220, 660);
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(177, 55);
+            btnAdicionar.Size = new Size(177, 40);
             btnAdicionar.TabIndex = 1;
-            btnAdicionar.Text = "ADICIONAR";
+            btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = false;
             btnAdicionar.Click += btnAdicionar_Click;
             // 
             // btnExcluir
             // 
-            btnExcluir.BackColor = Color.FromArgb(108, 138, 182);
+            btnExcluir.BackColor = Color.FromArgb(192, 0, 0);
             btnExcluir.FlatStyle = FlatStyle.Popup;
             btnExcluir.Font = new Font("Segoe UI Semilight", 12F);
             btnExcluir.ForeColor = Color.FromArgb(226, 239, 239);
-            btnExcluir.Location = new Point(417, 644);
+            btnExcluir.Location = new Point(411, 660);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(162, 55);
+            btnExcluir.Size = new Size(177, 40);
             btnExcluir.TabIndex = 2;
-            btnExcluir.Text = "EXCLUIR";
+            btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
             btnExcluir.Click += btnExcluir_Click;
             // 
             // btnEditar
             // 
-            btnEditar.BackColor = Color.FromArgb(108, 138, 182);
+            btnEditar.BackColor = Color.FromArgb(19, 62, 112);
             btnEditar.FlatStyle = FlatStyle.Popup;
             btnEditar.Font = new Font("Segoe UI Semilight", 12F);
             btnEditar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnEditar.Location = new Point(600, 644);
+            btnEditar.Location = new Point(600, 660);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(181, 55);
+            btnEditar.Size = new Size(177, 40);
             btnEditar.TabIndex = 3;
-            btnEditar.Text = "EDITAR";
+            btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
             btnEditar.Click += btnEditar_Click;
             // 
@@ -274,25 +274,26 @@
             btnSalvar.FlatStyle = FlatStyle.Popup;
             btnSalvar.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnSalvar.Location = new Point(802, 644);
+            btnSalvar.Location = new Point(936, 660);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(179, 55);
+            btnSalvar.Size = new Size(177, 40);
             btnSalvar.TabIndex = 4;
-            btnSalvar.Text = "SALVAR";
+            btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
             btnSalvar.Click += btnSalvar_Click;
             // 
             // btnVoltar
             // 
-            btnVoltar.BackColor = Color.FromArgb(108, 138, 182);
+            btnVoltar.BackColor = Color.FromArgb(19, 62, 112);
             btnVoltar.BackgroundImageLayout = ImageLayout.Zoom;
             btnVoltar.FlatStyle = FlatStyle.Popup;
             btnVoltar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = Color.FromArgb(226, 239, 239);
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(1127, 644);
+            btnVoltar.Location = new Point(1127, 660);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(83, 55);
+            btnVoltar.RightToLeft = RightToLeft.No;
+            btnVoltar.Size = new Size(83, 40);
             btnVoltar.TabIndex = 5;
             btnVoltar.UseVisualStyleBackColor = false;
             btnVoltar.Click += btnVoltar_Click;

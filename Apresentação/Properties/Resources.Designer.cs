@@ -59,5 +59,25 @@ namespace Apresentação.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _64_Sem_Título_20240825150204 {
+            get {
+                object obj = ResourceManager.GetObject("64 Sem Título_20240825150204", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _64_Sem_Título_20240908014550 {
+            get {
+                object obj = ResourceManager.GetObject("64 Sem Título_20240908014550", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -77,31 +77,31 @@ namespace Apresentação
             switch (modo)
             {
                 case 0: //neutro
-                    btnInativar.Enabled = true;
-                    btnEditar.Enabled = true;
-                    btnExcluir.Enabled = true;
-                    btnSalvar.Enabled = false;
-                    btnVoltar.Enabled = true;
-                    grpDados.Enabled = false;
-                    dgPsicologo.Enabled = true;
+                    btnInativar.Visible = true;
+                    btnEditar.Visible = true;
+                    btnExcluir.Visible = true;
+                    btnSalvar.Visible = false;
+                    btnVoltar.Visible = true;
+                    grpDados.Visible = false;
+                    dgPsicologo.Visible = true;
                     break;
                 case 1: //inclusão
-                    btnInativar.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnExcluir.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnVoltar.Enabled = true;
-                    grpDados.Enabled = true;
-                    dgPsicologo.Enabled = false;
+                    btnInativar.Visible = false;
+                    btnEditar.Visible = false;
+                    btnExcluir.Visible = false;
+                    btnSalvar.Visible = true;
+                    btnVoltar.Visible = true;
+                    grpDados.Visible = true;
+                    dgPsicologo.Visible = false;
                     break;
                 case 2:
-                    btnInativar.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnExcluir.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnVoltar.Enabled = true;
-                    grpDados.Enabled = true;
-                    dgPsicologo.Enabled = false;
+                    btnInativar.Visible = false;
+                    btnEditar.Visible = false;
+                    btnExcluir.Visible = false;
+                    btnSalvar.Visible = true;
+                    btnVoltar.Visible = true;
+                    grpDados.Visible = true;
+                    dgPsicologo.Visible = false;
                     break;
             }
         }

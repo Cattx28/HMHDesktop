@@ -128,7 +128,7 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.BackColor = Color.FromArgb(93, 123, 167);
+            btnEntrar.BackColor = Color.FromArgb(19, 62, 112);
             btnEntrar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEntrar.ForeColor = Color.FromArgb(226, 239, 239);
             btnEntrar.Location = new Point(40, 429);
