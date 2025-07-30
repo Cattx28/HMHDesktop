@@ -85,7 +85,11 @@
             dgPsicologo.DefaultCellStyle = dataGridViewCellStyle3;
             dgPsicologo.EnableHeadersVisualStyles = false;
             dgPsicologo.GridColor = Color.FromArgb(208, 226, 241);
+<<<<<<< HEAD
             dgPsicologo.Location = new Point(213, 259);
+=======
+            dgPsicologo.Location = new Point(213, 270);
+>>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             dgPsicologo.Name = "dgPsicologo";
             dgPsicologo.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -98,7 +102,11 @@
             dgPsicologo.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgPsicologo.RowHeadersVisible = false;
             dgPsicologo.RowHeadersWidth = 51;
+<<<<<<< HEAD
             dgPsicologo.Size = new Size(998, 383);
+=======
+            dgPsicologo.Size = new Size(998, 359);
+>>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             dgPsicologo.TabIndex = 0;
             dgPsicologo.SelectionChanged += dgPsicologo_SelectionChanged;
             // 
@@ -118,7 +126,11 @@
             grpDados.FlatStyle = FlatStyle.System;
             grpDados.Location = new Point(212, 94);
             grpDados.Name = "grpDados";
+<<<<<<< HEAD
             grpDados.Size = new Size(908, 157);
+=======
+            grpDados.Size = new Size(908, 155);
+>>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             grpDados.TabIndex = 1;
             grpDados.TabStop = false;
             // 
@@ -165,9 +177,15 @@
             txtEmail.Cursor = Cursors.IBeam;
             txtEmail.Font = new Font("Segoe UI Semilight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.ForeColor = Color.FromArgb(38, 68, 102);
+<<<<<<< HEAD
             txtEmail.Location = new Point(298, 111);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(599, 30);
+=======
+            txtEmail.Location = new Point(281, 111);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(616, 30);
+>>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             txtEmail.TabIndex = 26;
             // 
             // label4
@@ -175,7 +193,11 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
             label4.ForeColor = Color.FromArgb(38, 68, 102);
+<<<<<<< HEAD
             label4.Location = new Point(223, 112);
+=======
+            label4.Location = new Point(209, 113);
+>>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             label4.Name = "label4";
             label4.Size = new Size(69, 25);
             label4.TabIndex = 25;
@@ -248,7 +270,11 @@
             btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar.ForeColor = Color.FromArgb(226, 239, 239);
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
+<<<<<<< HEAD
             btnBuscar.Location = new Point(1139, 191);
+=======
+            btnBuscar.Location = new Point(1139, 202);
+>>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(71, 47);
             btnBuscar.TabIndex = 7;

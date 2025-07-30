@@ -148,9 +148,15 @@
             txtIdade.Cursor = Cursors.IBeam;
             txtIdade.Font = new Font("Segoe UI Semilight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtIdade.ForeColor = Color.FromArgb(38, 68, 102);
+<<<<<<< HEAD
             txtIdade.Location = new Point(775, 67);
             txtIdade.Name = "txtIdade";
             txtIdade.Size = new Size(119, 30);
+=======
+            txtIdade.Location = new Point(712, 113);
+            txtIdade.Name = "txtIdade";
+            txtIdade.Size = new Size(172, 30);
+>>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             txtIdade.TabIndex = 13;
             // 
             // label3
@@ -158,7 +164,11 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
             label3.ForeColor = Color.FromArgb(38, 68, 102);
+<<<<<<< HEAD
             label3.Location = new Point(650, 67);
+=======
+            label3.Location = new Point(583, 114);
+>>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             label3.Name = "label3";
             label3.Size = new Size(128, 25);
             label3.TabIndex = 12;
@@ -173,7 +183,11 @@
             txtNome.ForeColor = Color.FromArgb(38, 68, 102);
             txtNome.Location = new Point(69, 67);
             txtNome.Name = "txtNome";
+<<<<<<< HEAD
             txtNome.Size = new Size(575, 30);
+=======
+            txtNome.Size = new Size(815, 30);
+>>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             txtNome.TabIndex = 11;
             // 
             // label2
@@ -352,8 +366,6 @@
         private Label label1;
         private TextBox txtNome;
         private Label label2;
-        private TextBox txtSenha;
-        private Label label5;
         private TextBox txtEmail;
         private Label label4;
         private TextBox txtIdade;
