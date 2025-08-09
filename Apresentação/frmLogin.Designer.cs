@@ -38,15 +38,17 @@
             label1 = new Label();
             btnEntrar = new Button();
             btnFechar = new Button();
+            imgOlho = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgUsuario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSenha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgOlho).BeginInit();
             SuspendLayout();
             // 
             // imgLogo
             // 
             imgLogo.BackColor = Color.Transparent;
-            imgLogo.Image = (Image)resources.GetObject("imgLogo.Image");
+            imgLogo.Image = Properties.Resources._64_Sem_Título_20240825150204;
             imgLogo.Location = new Point(46, 20);
             imgLogo.Name = "imgLogo";
             imgLogo.Size = new Size(361, 217);
@@ -83,7 +85,7 @@
             txtLogin.BackColor = Color.FromArgb(226, 239, 239);
             txtLogin.Cursor = Cursors.IBeam;
             txtLogin.Font = new Font("Leelawadee UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtLogin.ForeColor = Color.FromArgb(38, 68, 102);
+            txtLogin.ForeColor = Color.FromArgb(19, 62, 112);
             txtLogin.Location = new Point(81, 285);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(326, 31);
@@ -151,12 +153,25 @@
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click;
             // 
+            // imgOlho
+            // 
+            imgOlho.BackColor = Color.Transparent;
+            imgOlho.Image = Properties.Resources.olho;
+            imgOlho.Location = new Point(365, 340);
+            imgOlho.Name = "imgOlho";
+            imgOlho.Size = new Size(42, 33);
+            imgOlho.SizeMode = PictureBoxSizeMode.Zoom;
+            imgOlho.TabIndex = 7;
+            imgOlho.TabStop = false;
+            imgOlho.Click += imgOlho_Click;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(452, 524);
+            Controls.Add(imgOlho);
             Controls.Add(btnFechar);
             Controls.Add(btnEntrar);
             Controls.Add(label1);
@@ -174,6 +189,7 @@
             ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgUsuario).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSenha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgOlho).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,5 +205,6 @@
         private TextBox txtSenha;
         private Button btnEntrar;
         private Button btnFechar;
+        private PictureBox imgOlho;
     }
 }

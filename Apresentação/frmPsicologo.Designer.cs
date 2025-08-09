@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPsicologo));
             dgPsicologo = new DataGridView();
             grpDados = new GroupBox();
@@ -58,55 +58,47 @@
             // 
             // dgPsicologo
             // 
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(180, 202, 232);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(19, 62, 112);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(104, 160, 205);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(19, 62, 112);
-            dgPsicologo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.BackColor = Color.FromArgb(180, 202, 232);
+            dataGridViewCellStyle17.ForeColor = Color.FromArgb(19, 62, 112);
+            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(104, 160, 205);
+            dataGridViewCellStyle17.SelectionForeColor = Color.FromArgb(19, 62, 112);
+            dgPsicologo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             dgPsicologo.BackgroundColor = Color.FromArgb(208, 226, 241);
             dgPsicologo.BorderStyle = BorderStyle.None;
             dgPsicologo.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(38, 68, 102);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(30, 99, 159);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgPsicologo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = Color.FromArgb(38, 68, 102);
+            dataGridViewCellStyle18.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle18.ForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(30, 99, 159);
+            dataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.True;
+            dgPsicologo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             dgPsicologo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(108, 138, 182);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(64, 118, 166);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgPsicologo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = Color.FromArgb(108, 138, 182);
+            dataGridViewCellStyle19.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle19.ForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle19.SelectionBackColor = Color.FromArgb(64, 118, 166);
+            dataGridViewCellStyle19.SelectionForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.False;
+            dgPsicologo.DefaultCellStyle = dataGridViewCellStyle19;
             dgPsicologo.EnableHeadersVisualStyles = false;
             dgPsicologo.GridColor = Color.FromArgb(208, 226, 241);
-<<<<<<< HEAD
-            dgPsicologo.Location = new Point(213, 259);
-=======
-            dgPsicologo.Location = new Point(213, 270);
->>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
+            dgPsicologo.Location = new Point(33, 207);
             dgPsicologo.Name = "dgPsicologo";
             dgPsicologo.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgPsicologo.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = SystemColors.Highlight;
+            dataGridViewCellStyle20.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle20.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.True;
+            dgPsicologo.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             dgPsicologo.RowHeadersVisible = false;
             dgPsicologo.RowHeadersWidth = 51;
-<<<<<<< HEAD
-            dgPsicologo.Size = new Size(998, 383);
-=======
-            dgPsicologo.Size = new Size(998, 359);
->>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
+            dgPsicologo.Size = new Size(1035, 525);
             dgPsicologo.TabIndex = 0;
             dgPsicologo.SelectionChanged += dgPsicologo_SelectionChanged;
             // 
@@ -124,13 +116,9 @@
             grpDados.Controls.Add(txtId);
             grpDados.Controls.Add(label1);
             grpDados.FlatStyle = FlatStyle.System;
-            grpDados.Location = new Point(212, 94);
+            grpDados.Location = new Point(31, 27);
             grpDados.Name = "grpDados";
-<<<<<<< HEAD
-            grpDados.Size = new Size(908, 157);
-=======
-            grpDados.Size = new Size(908, 155);
->>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
+            grpDados.Size = new Size(958, 155);
             grpDados.TabIndex = 1;
             grpDados.TabStop = false;
             // 
@@ -177,15 +165,9 @@
             txtEmail.Cursor = Cursors.IBeam;
             txtEmail.Font = new Font("Segoe UI Semilight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.ForeColor = Color.FromArgb(38, 68, 102);
-<<<<<<< HEAD
-            txtEmail.Location = new Point(298, 111);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(599, 30);
-=======
             txtEmail.Location = new Point(281, 111);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(616, 30);
->>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             txtEmail.TabIndex = 26;
             // 
             // label4
@@ -193,11 +175,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
             label4.ForeColor = Color.FromArgb(38, 68, 102);
-<<<<<<< HEAD
-            label4.Location = new Point(223, 112);
-=======
             label4.Location = new Point(209, 113);
->>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             label4.Name = "label4";
             label4.Size = new Size(69, 25);
             label4.TabIndex = 25;
@@ -270,13 +248,9 @@
             btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar.ForeColor = Color.FromArgb(226, 239, 239);
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
-<<<<<<< HEAD
-            btnBuscar.Location = new Point(1139, 191);
-=======
-            btnBuscar.Location = new Point(1139, 202);
->>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
+            btnBuscar.Location = new Point(997, 126);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(71, 47);
+            btnBuscar.Size = new Size(71, 50);
             btnBuscar.TabIndex = 7;
             btnBuscar.UseVisualStyleBackColor = false;
             btnBuscar.Click += btnBuscar_Click;
@@ -287,9 +261,9 @@
             btnInativar.FlatStyle = FlatStyle.Popup;
             btnInativar.Font = new Font("Segoe UI Semilight", 12F);
             btnInativar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnInativar.Location = new Point(355, 660);
+            btnInativar.Location = new Point(271, 748);
             btnInativar.Name = "btnInativar";
-            btnInativar.Size = new Size(135, 40);
+            btnInativar.Size = new Size(230, 40);
             btnInativar.TabIndex = 2;
             btnInativar.Text = "Inativar";
             btnInativar.UseVisualStyleBackColor = false;
@@ -301,9 +275,9 @@
             btnExcluir.FlatStyle = FlatStyle.Popup;
             btnExcluir.Font = new Font("Segoe UI Semilight", 12F);
             btnExcluir.ForeColor = Color.FromArgb(226, 239, 239);
-            btnExcluir.Location = new Point(212, 660);
+            btnExcluir.Location = new Point(33, 748);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(135, 40);
+            btnExcluir.Size = new Size(230, 40);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
@@ -315,9 +289,9 @@
             btnEditar.FlatStyle = FlatStyle.Popup;
             btnEditar.Font = new Font("Segoe UI Semilight", 12F);
             btnEditar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnEditar.Location = new Point(497, 660);
+            btnEditar.Location = new Point(508, 748);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(135, 40);
+            btnEditar.Size = new Size(230, 40);
             btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -325,13 +299,13 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.BackColor = Color.FromArgb(108, 138, 182);
+            btnSalvar.BackColor = Color.FromArgb(19, 62, 112);
             btnSalvar.FlatStyle = FlatStyle.Popup;
             btnSalvar.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnSalvar.Location = new Point(980, 660);
+            btnSalvar.Location = new Point(33, 748);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(135, 40);
+            btnSalvar.Size = new Size(943, 40);
             btnSalvar.TabIndex = 5;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
@@ -345,7 +319,7 @@
             btnVoltar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = Color.FromArgb(226, 239, 239);
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(1127, 660);
+            btnVoltar.Location = new Point(985, 748);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(83, 40);
             btnVoltar.TabIndex = 6;
@@ -358,9 +332,9 @@
             btnMostraInativos.FlatStyle = FlatStyle.Popup;
             btnMostraInativos.Font = new Font("Segoe UI Semilight", 12F);
             btnMostraInativos.ForeColor = Color.FromArgb(226, 239, 239);
-            btnMostraInativos.Location = new Point(706, 660);
+            btnMostraInativos.Location = new Point(746, 748);
             btnMostraInativos.Name = "btnMostraInativos";
-            btnMostraInativos.Size = new Size(206, 40);
+            btnMostraInativos.Size = new Size(230, 40);
             btnMostraInativos.TabIndex = 8;
             btnMostraInativos.Text = "Mostrar Inativos";
             btnMostraInativos.UseVisualStyleBackColor = false;
@@ -371,7 +345,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(208, 226, 241);
-            ClientSize = new Size(1240, 725);
+            ClientSize = new Size(1090, 800);
             Controls.Add(btnMostraInativos);
             Controls.Add(btnVoltar);
             Controls.Add(btnSalvar);

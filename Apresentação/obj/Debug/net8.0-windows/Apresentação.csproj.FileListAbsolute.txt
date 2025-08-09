@@ -70,3 +70,14 @@ C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\obj\Debug\net8.0-windows\Ap
 C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\FluentValidation.dll
 C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\obj\Debug\net8.0-windows\Apresentação.sourcelink.json
 C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.xml
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\obj\Debug\net8.0-windows\Apresentação.FrmDashboard.resources
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\obj\Debug\net8.0-windows\Apresentação.frmLogs.resources

@@ -17,8 +17,9 @@ namespace Apresentação
         private int modo = 0;
         internal DataTable dt;
 
+        private frmInicial parentForm;
 
-        public frmModerador()
+        public frmModerador(frmInicial parent)
         {
             InitializeComponent();
             _moderadorService = new ModeradorService();
@@ -27,7 +28,11 @@ namespace Apresentação
             carregaGridView();
             Habilita();
 
+            parentForm = parent;
+        }
 
+        public frmModerador()
+        {
         }
 
         private void ConfiguraDataGridView()
@@ -77,29 +82,29 @@ namespace Apresentação
             switch (modo)
             {
                 case 0: //neutro
-                    btnAdicionar.Enabled = true;
-                    btnEditar.Enabled = true;
-                    btnExcluir.Enabled = true;
-                    btnSalvar.Enabled = false;
-                    btnVoltar.Enabled = false;
+                    btnAdicionar.Visible = true;
+                    btnEditar.Visible = true;
+                    btnExcluir.Visible = true;
+                    btnSalvar.Visible = false;
+                    btnVoltar.Visible = false;
                     grpDados.Enabled = false;
                     dgModerador.Enabled = true;
                     break;
                 case 1: //inclusão
-                    btnAdicionar.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnExcluir.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnVoltar.Enabled = true;
+                    btnAdicionar.Visible = false;
+                    btnEditar.Visible = false;
+                    btnExcluir.Visible = false;
+                    btnSalvar.Visible = true;
+                    btnVoltar.Visible = true;
                     grpDados.Enabled = true;
                     dgModerador.Enabled = false;
                     break;
                 case 2:
-                    btnAdicionar.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnExcluir.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnVoltar.Enabled = true;
+                    btnAdicionar.Visible = false;
+                    btnEditar.Visible = false;
+                    btnExcluir.Visible = false;
+                    btnSalvar.Visible = true;
+                    btnVoltar.Visible = true;
                     grpDados.Enabled = true;
                     dgModerador.Enabled = false;
                     break;

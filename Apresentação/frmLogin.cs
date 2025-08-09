@@ -11,7 +11,7 @@ namespace Apresentação
         {
             InitializeComponent();
             _moderadorService = new ModeradorService();
-
+            imgLogo.Image = Properties.Resources.olho;
         }
 
 
@@ -39,7 +39,12 @@ namespace Apresentação
                              MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
+
+        private void imgOlho_Click(object sender, EventArgs e)
+        {
+            if (imgLogo.Image == Properties.Resources.olho) {
+                }
         }
+    }
 }
 

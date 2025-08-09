@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicial));
             panel1 = new Panel();
+            btnLogs = new Button();
+            btnDashboard = new Button();
             btnModerador = new Button();
             btnDenuncias = new Button();
             btnPsicologos = new Button();
@@ -38,7 +40,6 @@
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             btnFechar = new Button();
-            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -47,15 +48,49 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(19, 62, 112);
-            panel1.Controls.Add(button1);
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnLogs);
+            panel1.Controls.Add(btnDashboard);
             panel1.Controls.Add(btnModerador);
             panel1.Controls.Add(btnDenuncias);
             panel1.Controls.Add(btnPsicologos);
             panel1.Controls.Add(btnUsuarios);
-            panel1.Location = new Point(-8, -11);
+            panel1.Location = new Point(-1, -11);
             panel1.Name = "panel1";
-            panel1.Size = new Size(242, 757);
+            panel1.Size = new Size(230, 1114);
             panel1.TabIndex = 0;
+            // 
+            // btnLogs
+            // 
+            btnLogs.BackColor = Color.FromArgb(19, 62, 112);
+            btnLogs.FlatStyle = FlatStyle.Popup;
+            btnLogs.Font = new Font("Segoe UI Semilight", 11F);
+            btnLogs.ForeColor = Color.FromArgb(226, 239, 239);
+            btnLogs.Image = (Image)resources.GetObject("btnLogs.Image");
+            btnLogs.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLogs.Location = new Point(0, 95);
+            btnLogs.Name = "btnLogs";
+            btnLogs.Size = new Size(233, 40);
+            btnLogs.TabIndex = 6;
+            btnLogs.Text = "Histórico Ações";
+            btnLogs.UseVisualStyleBackColor = false;
+            btnLogs.Click += btnLogs_Click;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.FromArgb(19, 62, 112);
+            btnDashboard.FlatStyle = FlatStyle.Popup;
+            btnDashboard.Font = new Font("Segoe UI Semilight", 11F);
+            btnDashboard.ForeColor = Color.FromArgb(226, 239, 239);
+            btnDashboard.Image = (Image)resources.GetObject("btnDashboard.Image");
+            btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDashboard.Location = new Point(0, 134);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(233, 40);
+            btnDashboard.TabIndex = 5;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // btnModerador
             // 
@@ -66,9 +101,9 @@
             btnModerador.ForeColor = Color.FromArgb(226, 239, 239);
             btnModerador.Image = (Image)resources.GetObject("btnModerador.Image");
             btnModerador.ImageAlign = ContentAlignment.MiddleLeft;
-            btnModerador.Location = new Point(8, 95);
+            btnModerador.Location = new Point(0, 173);
             btnModerador.Name = "btnModerador";
-            btnModerador.Size = new Size(233, 45);
+            btnModerador.Size = new Size(233, 40);
             btnModerador.TabIndex = 1;
             btnModerador.Text = "Moderadores";
             btnModerador.UseVisualStyleBackColor = false;
@@ -82,9 +117,9 @@
             btnDenuncias.ForeColor = Color.FromArgb(226, 239, 239);
             btnDenuncias.Image = (Image)resources.GetObject("btnDenuncias.Image");
             btnDenuncias.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDenuncias.Location = new Point(8, 227);
+            btnDenuncias.Location = new Point(0, 290);
             btnDenuncias.Name = "btnDenuncias";
-            btnDenuncias.Size = new Size(233, 45);
+            btnDenuncias.Size = new Size(233, 40);
             btnDenuncias.TabIndex = 4;
             btnDenuncias.Text = "Denúncias";
             btnDenuncias.UseVisualStyleBackColor = false;
@@ -99,9 +134,9 @@
             btnPsicologos.ForeColor = Color.FromArgb(226, 239, 239);
             btnPsicologos.Image = (Image)resources.GetObject("btnPsicologos.Image");
             btnPsicologos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPsicologos.Location = new Point(9, 183);
+            btnPsicologos.Location = new Point(0, 251);
             btnPsicologos.Name = "btnPsicologos";
-            btnPsicologos.Size = new Size(233, 45);
+            btnPsicologos.Size = new Size(233, 40);
             btnPsicologos.TabIndex = 3;
             btnPsicologos.Text = "Psicólogos";
             btnPsicologos.UseVisualStyleBackColor = false;
@@ -116,9 +151,9 @@
             btnUsuarios.ForeColor = Color.FromArgb(226, 239, 239);
             btnUsuarios.Image = (Image)resources.GetObject("btnUsuarios.Image");
             btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
-            btnUsuarios.Location = new Point(8, 139);
+            btnUsuarios.Location = new Point(0, 212);
             btnUsuarios.Name = "btnUsuarios";
-            btnUsuarios.Size = new Size(233, 45);
+            btnUsuarios.Size = new Size(233, 40);
             btnUsuarios.TabIndex = 2;
             btnUsuarios.Text = "Usuários";
             btnUsuarios.UseVisualStyleBackColor = false;
@@ -142,9 +177,10 @@
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(btnFechar);
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(1, -2);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1495, 86);
+            panel2.Size = new Size(1500, 86);
             panel2.TabIndex = 1;
             // 
             // pictureBox1
@@ -163,27 +199,12 @@
             btnFechar.BackgroundImage = (Image)resources.GetObject("btnFechar.BackgroundImage");
             btnFechar.BackgroundImageLayout = ImageLayout.Center;
             btnFechar.FlatStyle = FlatStyle.Flat;
-            btnFechar.Location = new Point(1374, 25);
+            btnFechar.Location = new Point(1441, 25);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(40, 38);
             btnFechar.TabIndex = 6;
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(19, 62, 112);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Segoe UI Semilight", 11F);
-            button1.ForeColor = Color.FromArgb(226, 239, 239);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(8, 271);
-            button1.Name = "button1";
-            button1.Size = new Size(233, 45);
-            button1.TabIndex = 5;
-            button1.Text = "Dashboard";
-            button1.UseVisualStyleBackColor = false;
             // 
             // frmInicial
             // 
@@ -191,7 +212,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(208, 227, 241);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1448, 730);
+            ClientSize = new Size(1500, 900);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Segoe UI Light", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -201,6 +222,7 @@
             Name = "frmInicial";
             RightToLeft = RightToLeft.No;
             StartPosition = FormStartPosition.CenterScreen;
+            WindowState = FormWindowState.Minimized;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -220,6 +242,7 @@
         private Button btnFechar;
         private Button btnModerador;
         private PictureBox pictureBox1;
-        private Button button1;
+        private Button btnDashboard;
+        private Button btnLogs;
     }
 }

@@ -83,7 +83,7 @@
             dgUsuario.DefaultCellStyle = dataGridViewCellStyle3;
             dgUsuario.EnableHeadersVisualStyles = false;
             dgUsuario.GridColor = Color.FromArgb(208, 226, 241);
-            dgUsuario.Location = new Point(213, 282);
+            dgUsuario.Location = new Point(33, 207);
             dgUsuario.Name = "dgUsuario";
             dgUsuario.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -96,7 +96,7 @@
             dgUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgUsuario.RowHeadersVisible = false;
             dgUsuario.RowHeadersWidth = 51;
-            dgUsuario.Size = new Size(998, 347);
+            dgUsuario.Size = new Size(1035, 525);
             dgUsuario.TabIndex = 0;
             dgUsuario.SelectionChanged += dgUsuario_SelectionChanged;
             // 
@@ -112,7 +112,7 @@
             grpDados.Controls.Add(txtId);
             grpDados.Controls.Add(label1);
             grpDados.FlatStyle = FlatStyle.System;
-            grpDados.Location = new Point(212, 94);
+            grpDados.Location = new Point(31, 27);
             grpDados.Name = "grpDados";
             grpDados.Size = new Size(903, 166);
             grpDados.TabIndex = 1;
@@ -148,15 +148,9 @@
             txtIdade.Cursor = Cursors.IBeam;
             txtIdade.Font = new Font("Segoe UI Semilight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtIdade.ForeColor = Color.FromArgb(38, 68, 102);
-<<<<<<< HEAD
-            txtIdade.Location = new Point(775, 67);
-            txtIdade.Name = "txtIdade";
-            txtIdade.Size = new Size(119, 30);
-=======
             txtIdade.Location = new Point(712, 113);
             txtIdade.Name = "txtIdade";
             txtIdade.Size = new Size(172, 30);
->>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             txtIdade.TabIndex = 13;
             // 
             // label3
@@ -164,11 +158,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11F);
             label3.ForeColor = Color.FromArgb(38, 68, 102);
-<<<<<<< HEAD
-            label3.Location = new Point(650, 67);
-=======
             label3.Location = new Point(583, 114);
->>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             label3.Name = "label3";
             label3.Size = new Size(128, 25);
             label3.TabIndex = 12;
@@ -183,11 +173,7 @@
             txtNome.ForeColor = Color.FromArgb(38, 68, 102);
             txtNome.Location = new Point(69, 67);
             txtNome.Name = "txtNome";
-<<<<<<< HEAD
-            txtNome.Size = new Size(575, 30);
-=======
             txtNome.Size = new Size(815, 30);
->>>>>>> 395937688a0e58595ab8056c4723aaaa20480c7d
             txtNome.TabIndex = 11;
             // 
             // label2
@@ -234,9 +220,9 @@
             btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar.ForeColor = Color.FromArgb(226, 239, 239);
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
-            btnBuscar.Location = new Point(1139, 191);
+            btnBuscar.Location = new Point(997, 126);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(71, 47);
+            btnBuscar.Size = new Size(71, 50);
             btnBuscar.TabIndex = 7;
             btnBuscar.UseVisualStyleBackColor = false;
             btnBuscar.Click += btnBuscar_Click;
@@ -247,9 +233,9 @@
             btnInativar.FlatStyle = FlatStyle.Popup;
             btnInativar.Font = new Font("Segoe UI Semilight", 12F);
             btnInativar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnInativar.Location = new Point(355, 660);
+            btnInativar.Location = new Point(271, 748);
             btnInativar.Name = "btnInativar";
-            btnInativar.Size = new Size(135, 40);
+            btnInativar.Size = new Size(230, 40);
             btnInativar.TabIndex = 2;
             btnInativar.Text = "Inativar";
             btnInativar.UseVisualStyleBackColor = false;
@@ -261,9 +247,9 @@
             btnExcluir.FlatStyle = FlatStyle.Popup;
             btnExcluir.Font = new Font("Segoe UI Semilight", 12F);
             btnExcluir.ForeColor = Color.FromArgb(226, 239, 239);
-            btnExcluir.Location = new Point(212, 660);
+            btnExcluir.Location = new Point(33, 748);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(135, 40);
+            btnExcluir.Size = new Size(230, 40);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
@@ -275,9 +261,9 @@
             btnEditar.FlatStyle = FlatStyle.Popup;
             btnEditar.Font = new Font("Segoe UI Semilight", 12F);
             btnEditar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnEditar.Location = new Point(497, 660);
+            btnEditar.Location = new Point(508, 748);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(135, 40);
+            btnEditar.Size = new Size(230, 40);
             btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -285,13 +271,13 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.BackColor = Color.FromArgb(108, 138, 182);
+            btnSalvar.BackColor = Color.FromArgb(19, 62, 112);
             btnSalvar.FlatStyle = FlatStyle.Popup;
             btnSalvar.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnSalvar.Location = new Point(980, 660);
+            btnSalvar.Location = new Point(31, 748);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(135, 40);
+            btnSalvar.Size = new Size(945, 40);
             btnSalvar.TabIndex = 5;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
@@ -305,7 +291,7 @@
             btnVoltar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = Color.FromArgb(226, 239, 239);
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(1127, 660);
+            btnVoltar.Location = new Point(985, 748);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(83, 40);
             btnVoltar.TabIndex = 6;
@@ -318,9 +304,9 @@
             btnMostraInativos.FlatStyle = FlatStyle.Popup;
             btnMostraInativos.Font = new Font("Segoe UI Semilight", 12F);
             btnMostraInativos.ForeColor = Color.FromArgb(226, 239, 239);
-            btnMostraInativos.Location = new Point(706, 660);
+            btnMostraInativos.Location = new Point(746, 748);
             btnMostraInativos.Name = "btnMostraInativos";
-            btnMostraInativos.Size = new Size(206, 40);
+            btnMostraInativos.Size = new Size(230, 40);
             btnMostraInativos.TabIndex = 9;
             btnMostraInativos.Text = "Mostrar Inativos";
             btnMostraInativos.UseVisualStyleBackColor = false;
@@ -331,7 +317,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(208, 226, 241);
-            ClientSize = new Size(1240, 725);
+            ClientSize = new Size(1090, 800);
             Controls.Add(btnMostraInativos);
             Controls.Add(btnVoltar);
             Controls.Add(btnSalvar);
@@ -346,6 +332,7 @@
             Name = "frmUsuario";
             StartPosition = FormStartPosition.Manual;
             Text = "FrmUsuarios";
+            Load += frmUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)dgUsuario).EndInit();
             grpDados.ResumeLayout(false);
             grpDados.PerformLayout();

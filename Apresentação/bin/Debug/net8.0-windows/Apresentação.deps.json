@@ -11,7 +11,11 @@
           "BCrypt.Net-Next": "4.0.3",
           "Dados": "1.0.0",
           "FluentValidation": "12.0.0",
-          "Negocio": "1.0.0"
+          "Microsoft.Web.WebView2": "1.0.3351.48",
+          "Negocio": "1.0.0",
+          "Microsoft.Web.WebView2.Core": "1.0.3351.48",
+          "Microsoft.Web.WebView2.WinForms": "1.0.3351.48",
+          "Microsoft.Web.WebView2.Wpf": "1.0.3351.48"
         },
         "runtime": {
           "Apresentação.dll": {}
@@ -80,6 +84,25 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.Web.WebView2/1.0.3351.48": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.3351.48"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.3351.48"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.3351.48"
+          }
+        }
+      },
       "MySql.Data/9.1.0": {
         "dependencies": {
           "BouncyCastle.Cryptography": "2.3.1",
@@ -227,6 +250,7 @@
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "FluentValidation": "12.0.0",
+          "Microsoft.Web.WebView2": "1.0.3351.48",
           "MySql.Data": "9.1.0"
         },
         "runtime": {
@@ -238,12 +262,37 @@
       },
       "Negocio/1.0.0": {
         "dependencies": {
-          "Dados": "1.0.0"
+          "Dados": "1.0.0",
+          "Microsoft.Web.WebView2": "1.0.3351.48"
         },
         "runtime": {
           "Negocio.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2.Core/1.0.3351.48": {
+        "runtime": {
+          "Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.3351.48",
+            "fileVersion": "1.0.3351.48"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2.WinForms/1.0.3351.48": {
+        "runtime": {
+          "Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.3351.48",
+            "fileVersion": "1.0.3351.48"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2.Wpf/1.0.3351.48": {
+        "runtime": {
+          "Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.3351.48",
+            "fileVersion": "1.0.3351.48"
           }
         }
       }
@@ -317,6 +366,13 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.3351.48": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIzXdl3x3H2MX2es7+BHYT3pLkLoT7090omqla9S3MQQCma0slwiY+CXBM6x0LmdLTpksoQ6XUqOAXrtxjtklQ==",
+      "path": "microsoft.web.webview2/1.0.3351.48",
+      "hashPath": "microsoft.web.webview2.1.0.3351.48.nupkg.sha512"
     },
     "MySql.Data/9.1.0": {
       "type": "package",
@@ -479,6 +535,21 @@
     },
     "Negocio/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Web.WebView2.Core/1.0.3351.48": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Web.WebView2.WinForms/1.0.3351.48": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Web.WebView2.Wpf/1.0.3351.48": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

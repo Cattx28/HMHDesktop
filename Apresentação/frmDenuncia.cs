@@ -13,12 +13,18 @@ namespace Apresentação
         private int modo = 0;
         internal DataTable dt;
 
+        private frmInicial parentForm;
 
-        public frmDenuncia()
+        public frmDenuncia(frmInicial parent)
         {
             InitializeComponent();
             _denunciaService = new DenunciaService();
             dgDenuncia.ColumnCount = 5;
+            parentForm = parent;
+        }
+
+        public frmDenuncia()
+        {
         }
 
         private void ConfiguraDataGridViewMensagem()

@@ -13,8 +13,9 @@ namespace Apresentação
         private int modo = 0;
         internal DataTable dt;
 
+        private frmInicial parentForm;
 
-        public frmUsuario()
+        public frmUsuario(frmInicial parent)
         {
             InitializeComponent();
             _usuarioService = new UsuarioService();
@@ -22,6 +23,12 @@ namespace Apresentação
             ConfiguraDataGridView();
             carregaGridView();
             Habilita();
+
+            parentForm = parent;
+        }
+
+        public frmUsuario()
+        {
         }
 
         private void ConfiguraDataGridView()
@@ -59,7 +66,6 @@ namespace Apresentação
             txtNome?.Clear();
             txtIdade?.Clear();
             txtEmail?.Clear();
-            txtSenha?.Clear();
 
             txtNome?.Focus();
         }
@@ -75,33 +81,25 @@ namespace Apresentação
             switch (modo)
             {
                 case 0: //neutro
-                    btnInativar.Enabled = true;
-                    btnEditar.Enabled = true;
-                    btnExcluir.Enabled = true;
-                    btnSalvar.Enabled = false;
-                    btnVoltar.Enabled = true;
+                    btnInativar.Visible = true;
+                    btnEditar.Visible = true;
+                    btnExcluir.Visible = true;
+                    btnSalvar.Visible = false;
+                    btnMostraInativos.Visible = true;
                     grpDados.Enabled = false;
                     dgUsuario.Enabled = true;
                     break;
                 case 1: //inclusão
-                    btnInativar.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnExcluir.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnVoltar.Enabled = true;
+                    btnInativar.Visible = false;
+                    btnEditar.Visible = false;
+                    btnExcluir.Visible = false;
+                    btnSalvar.Visible = true;
+                    btnMostraInativos.Visible= false;
                     grpDados.Enabled = true;
                     dgUsuario.Enabled = false;
                     break;
-                case 2:
-                    btnInativar.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnExcluir.Enabled = false;
-                    btnSalvar.Enabled = true;
-                    btnVoltar.Enabled = true;
-                    grpDados.Enabled = true;
-                    dgUsuario.Enabled = false;
-                    break;
-            }
+          
+        }
         }
 
         private void dgUsuario_SelectionChanged(object sender, EventArgs e)
@@ -138,7 +136,7 @@ namespace Apresentação
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            modo = 2;
+            modo = 1;
             Habilita();
         }
 
@@ -173,12 +171,10 @@ namespace Apresentação
                 MessageBox.Show("Por favor, insira um número válido.");
             }
             email = txtEmail.Text;
-            senha = txtSenha.Text;
 
             usuario.nome = nome;
             usuario.idade = idade;
             usuario.email = email;
-            usuario.senha = senha;
 
             //Validator
             if (usuario != null)
@@ -215,8 +211,8 @@ namespace Apresentação
                 MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else*/
-            if (modo == 2)
-            {
+            //if (modo == 1)
+            //{
                 resultado = _usuarioService.Update(id, nome, idade, email);
                 if (resultado == "SUCESSO")
                 {
@@ -228,7 +224,7 @@ namespace Apresentação
                     msg = "Falha ao atualizar USUÁRIO!";
                 }
                 MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //}
 
             modo = 0;
             Habilita();
@@ -300,6 +296,11 @@ namespace Apresentação
         {
             dgUsuario.DataSource = _usuarioService.GetAllInativos();
             dgUsuario.Refresh();
+        }
+
+        private void frmUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

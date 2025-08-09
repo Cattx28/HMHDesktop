@@ -1,4 +1,6 @@
-﻿namespace Apresentação
+﻿using ZstdSharp.Unsafe;
+
+namespace Apresentação
 {
     public partial class frmInicial : Form
     {
@@ -7,38 +9,50 @@
             InitializeComponent();
         }
 
+        private List<Form> filhos = new List<Form>();
+
+        private void Posicao(Form filho)
+        {
+            filho.Size = new Size(this.ClientSize.Width - panel1.Width - 5, this.ClientSize.Height - panel2.Height - 5);
+            filho.Location = new Point(panel1.Width, 0);
+        }
+
+
         private void btnModerador_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms.OfType<frmModerador>().Count() == 0)
             {
-                frmModerador fForn = new frmModerador();
-                fForn.MdiParent = this;
-                fForn.Show();
+                frmModerador filhoMod = new(this);
+                filhoMod.MdiParent = this;
+                filhos.Add(filhoMod);
+                filhoMod.Show();
+
+                Posicao(filhoMod);
             }
             else
             {
-                frmModerador fForn = Application.OpenForms.OfType<frmModerador>().First();
-                fForn.BringToFront();
+                frmModerador filhoMod = Application.OpenForms.OfType<frmModerador>().First();
+                filhoMod.BringToFront();
+                Posicao(filhoMod);
             }
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            foreach (Form frm in this.MdiChildren)
-            {
-                frm.Close();
-            }
-
             if (Application.OpenForms.OfType<frmUsuario>().Count() == 0)
             {
-                frmUsuario fForn = new frmUsuario();
-                fForn.MdiParent = this;
-                fForn.Show();
+                frmUsuario filhoUser = new(this);
+                filhoUser.MdiParent = this;
+                filhos.Add(filhoUser);
+                filhoUser.Show();
+
+                Posicao(filhoUser);
             }
             else
             {
-                frmUsuario fForn = Application.OpenForms.OfType<frmUsuario>().First();
-                fForn.BringToFront();
+                frmUsuario filhoUser = Application.OpenForms.OfType<frmUsuario>().First();
+                filhoUser.BringToFront();
+                Posicao(filhoUser);
             }
         }
 
@@ -46,14 +60,18 @@
         {
             if (Application.OpenForms.OfType<frmPsicologo>().Count() == 0)
             {
-                frmPsicologo fForn = new frmPsicologo();
-                fForn.MdiParent = this;
-                fForn.Show();
+                frmPsicologo filhoPsi = new(this);
+                filhoPsi.MdiParent = this;
+                filhos.Add(filhoPsi);
+                filhoPsi.Show();
+
+                Posicao(filhoPsi);
             }
             else
             {
-                frmPsicologo fForn = Application.OpenForms.OfType<frmPsicologo>().First();
-                fForn.BringToFront();
+                frmPsicologo filhoPsi = Application.OpenForms.OfType<frmPsicologo>().First();
+                filhoPsi.BringToFront();
+                Posicao(filhoPsi);
             }
         }
 
@@ -61,14 +79,18 @@
         {
             if (Application.OpenForms.OfType<frmDenuncia>().Count() == 0)
             {
-                frmDenuncia fForn = new frmDenuncia();
-                fForn.MdiParent = this;
-                fForn.Show();
+                frmDenuncia filhoDenuncia = new(this);
+                filhoDenuncia.MdiParent = this;
+                filhos.Add(filhoDenuncia);
+                filhoDenuncia.Show();
+
+                Posicao(filhoDenuncia);
             }
             else
             {
-                frmDenuncia fForn = Application.OpenForms.OfType<frmDenuncia>().First();
-                fForn.BringToFront();
+                frmDenuncia filhoDenuncia = Application.OpenForms.OfType<frmDenuncia>().First();
+                filhoDenuncia.BringToFront();
+                Posicao(filhoDenuncia);
             }
         }
 
@@ -80,6 +102,44 @@
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<FrmDashboard>().Count() == 0)
+            {
+                FrmDashboard filhoDashboard = new(this);
+                filhoDashboard.MdiParent = this;
+                filhos.Add(filhoDashboard);
+                filhoDashboard.Show();
+
+                Posicao(filhoDashboard);
+            }
+            else
+            {
+                FrmDashboard filhoDashboard = Application.OpenForms.OfType<FrmDashboard>().First();
+                filhoDashboard.BringToFront();
+                Posicao(filhoDashboard);
+            }
+        }
+
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<frmLogs>().Count() == 0)
+            {
+                frmLogs filhoLogs = new (this);
+                filhoLogs.MdiParent = this;
+                filhos.Add(filhoLogs);
+                filhoLogs.Show();
+
+                Posicao(filhoLogs);
+            }
+            else
+            {
+                frmLogs filhoLogs = Application.OpenForms.OfType<frmLogs>().First();
+                filhoLogs.BringToFront();
+                Posicao(filhoLogs);
+            }
         }
     }
 }

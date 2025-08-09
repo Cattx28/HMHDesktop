@@ -72,7 +72,7 @@
             dgDenuncia.DefaultCellStyle = dataGridViewCellStyle3;
             dgDenuncia.EnableHeadersVisualStyles = false;
             dgDenuncia.GridColor = Color.FromArgb(208, 226, 241);
-            dgDenuncia.Location = new Point(220, 206);
+            dgDenuncia.Location = new Point(33, 97);
             dgDenuncia.Name = "dgDenuncia";
             dgDenuncia.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -95,7 +95,7 @@
             btnExcluir.FlatStyle = FlatStyle.Popup;
             btnExcluir.Font = new Font("Segoe UI Semilight", 12F);
             btnExcluir.ForeColor = Color.FromArgb(226, 239, 239);
-            btnExcluir.Location = new Point(220, 644);
+            btnExcluir.Location = new Point(33, 535);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(264, 40);
             btnExcluir.TabIndex = 7;
@@ -109,7 +109,7 @@
             btnMensagem.FlatStyle = FlatStyle.Popup;
             btnMensagem.Font = new Font("Segoe UI Semilight", 12F);
             btnMensagem.ForeColor = Color.FromArgb(226, 239, 239);
-            btnMensagem.Location = new Point(220, 133);
+            btnMensagem.Location = new Point(33, 24);
             btnMensagem.Name = "btnMensagem";
             btnMensagem.Size = new Size(184, 40);
             btnMensagem.TabIndex = 1;
@@ -123,7 +123,7 @@
             btnRespostas.FlatStyle = FlatStyle.Popup;
             btnRespostas.Font = new Font("Segoe UI Semilight", 12F);
             btnRespostas.ForeColor = Color.FromArgb(226, 239, 239);
-            btnRespostas.Location = new Point(434, 133);
+            btnRespostas.Location = new Point(247, 24);
             btnRespostas.Name = "btnRespostas";
             btnRespostas.Size = new Size(184, 40);
             btnRespostas.TabIndex = 2;
@@ -139,7 +139,7 @@
             btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar.ForeColor = Color.FromArgb(226, 239, 239);
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
-            btnBuscar.Location = new Point(1123, 133);
+            btnBuscar.Location = new Point(936, 24);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(83, 40);
             btnBuscar.TabIndex = 4;
@@ -148,7 +148,7 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(937, 161);
+            txtId.Location = new Point(750, 52);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(125, 27);
@@ -161,7 +161,7 @@
             btnPostagens.FlatStyle = FlatStyle.Popup;
             btnPostagens.Font = new Font("Segoe UI Semilight", 12F);
             btnPostagens.ForeColor = Color.FromArgb(226, 239, 239);
-            btnPostagens.Location = new Point(641, 133);
+            btnPostagens.Location = new Point(454, 24);
             btnPostagens.Name = "btnPostagens";
             btnPostagens.Size = new Size(184, 40);
             btnPostagens.TabIndex = 3;
@@ -174,7 +174,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(208, 226, 241);
-            ClientSize = new Size(1240, 725);
+            ClientSize = new Size(1090, 700);
             Controls.Add(btnPostagens);
             Controls.Add(txtId);
             Controls.Add(btnBuscar);

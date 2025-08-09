@@ -1,0 +1,8 @@
+2025/08/08-20:05:49.923 4f0c Reusing MANIFEST C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
+2025/08/08-20:05:49.925 4f0c Recovering log #43
+2025/08/08-20:05:49.928 4f0c Reusing old log C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/000043.log 
+2025/08/08-20:06:56.741 59ac Level-0 table #47: started
+2025/08/08-20:06:56.750 59ac Level-0 table #47: 65794 bytes OK
+2025/08/08-20:06:56.752 59ac Delete type=0 #43
+2025/08/08-20:06:56.753 4f0c Compacting 4@0 + 1@1 files
+2025/08/08-20:06:56.761 4f0c compacted to: files[ 4 1 1 0 0 0 0 ]

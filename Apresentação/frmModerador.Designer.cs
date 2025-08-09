@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModerador));
             dgModerador = new DataGridView();
             grpDados = new GroupBox();
@@ -55,47 +55,47 @@
             // 
             // dgModerador
             // 
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(180, 202, 232);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(19, 62, 112);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(104, 160, 205);
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(19, 62, 112);
-            dgModerador.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(180, 202, 232);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(19, 62, 112);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(104, 160, 205);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(19, 62, 112);
+            dgModerador.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgModerador.BackgroundColor = Color.FromArgb(208, 226, 241);
             dgModerador.BorderStyle = BorderStyle.None;
             dgModerador.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(38, 68, 102);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(30, 99, 159);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgModerador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(38, 68, 102);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(30, 99, 159);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgModerador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgModerador.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(108, 138, 182);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(64, 118, 166);
-            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(226, 239, 239);
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            dgModerador.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(108, 138, 182);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(64, 118, 166);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(226, 239, 239);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgModerador.DefaultCellStyle = dataGridViewCellStyle3;
             dgModerador.EnableHeadersVisualStyles = false;
             dgModerador.GridColor = Color.FromArgb(208, 226, 241);
-            dgModerador.Location = new Point(213, 249);
+            dgModerador.Location = new Point(33, 207);
             dgModerador.Name = "dgModerador";
             dgModerador.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgModerador.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgModerador.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgModerador.RowHeadersVisible = false;
             dgModerador.RowHeadersWidth = 51;
-            dgModerador.Size = new Size(998, 386);
+            dgModerador.Size = new Size(1035, 525);
             dgModerador.TabIndex = 0;
             dgModerador.SelectionChanged += dgModerador_SelectionChanged;
             // 
@@ -111,9 +111,9 @@
             grpDados.Controls.Add(txtId);
             grpDados.Controls.Add(label1);
             grpDados.FlatStyle = FlatStyle.System;
-            grpDados.Location = new Point(212, 94);
+            grpDados.Location = new Point(31, 27);
             grpDados.Name = "grpDados";
-            grpDados.Size = new Size(907, 174);
+            grpDados.Size = new Size(922, 159);
             grpDados.TabIndex = 1;
             grpDados.TabStop = false;
             // 
@@ -219,7 +219,7 @@
             btnBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar.ForeColor = Color.FromArgb(19, 62, 112);
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
-            btnBuscar.Location = new Point(1140, 196);
+            btnBuscar.Location = new Point(997, 126);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(71, 50);
             btnBuscar.TabIndex = 11;
@@ -232,9 +232,9 @@
             btnAdicionar.FlatStyle = FlatStyle.Popup;
             btnAdicionar.Font = new Font("Segoe UI Semilight", 12F);
             btnAdicionar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnAdicionar.Location = new Point(220, 660);
+            btnAdicionar.Location = new Point(33, 748);
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(177, 40);
+            btnAdicionar.Size = new Size(335, 40);
             btnAdicionar.TabIndex = 1;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = false;
@@ -246,9 +246,9 @@
             btnExcluir.FlatStyle = FlatStyle.Popup;
             btnExcluir.Font = new Font("Segoe UI Semilight", 12F);
             btnExcluir.ForeColor = Color.FromArgb(226, 239, 239);
-            btnExcluir.Location = new Point(411, 660);
+            btnExcluir.Location = new Point(383, 748);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(177, 40);
+            btnExcluir.Size = new Size(335, 40);
             btnExcluir.TabIndex = 2;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
@@ -260,9 +260,9 @@
             btnEditar.FlatStyle = FlatStyle.Popup;
             btnEditar.Font = new Font("Segoe UI Semilight", 12F);
             btnEditar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnEditar.Location = new Point(600, 660);
+            btnEditar.Location = new Point(733, 748);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(177, 40);
+            btnEditar.Size = new Size(335, 40);
             btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -270,13 +270,13 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.BackColor = Color.FromArgb(108, 138, 182);
+            btnSalvar.BackColor = Color.FromArgb(19, 62, 112);
             btnSalvar.FlatStyle = FlatStyle.Popup;
             btnSalvar.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.FromArgb(226, 239, 239);
-            btnSalvar.Location = new Point(936, 660);
+            btnSalvar.Location = new Point(31, 748);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(177, 40);
+            btnSalvar.Size = new Size(941, 40);
             btnSalvar.TabIndex = 4;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
@@ -290,7 +290,7 @@
             btnVoltar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = Color.FromArgb(226, 239, 239);
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(1127, 660);
+            btnVoltar.Location = new Point(985, 748);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.RightToLeft = RightToLeft.No;
             btnVoltar.Size = new Size(83, 40);
@@ -303,7 +303,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(208, 226, 241);
-            ClientSize = new Size(1240, 725);
+            ClientSize = new Size(1090, 800);
             Controls.Add(btnVoltar);
             Controls.Add(btnSalvar);
             Controls.Add(btnEditar);

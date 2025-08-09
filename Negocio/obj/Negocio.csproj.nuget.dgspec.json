@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[11.11.0, )"
             },
+            "Microsoft.Web.WebView2": {
+              "target": "Package",
+              "version": "[1.0.3351.48, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.1.0, )"
@@ -132,6 +136,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Web.WebView2": {
+              "target": "Package",
+              "version": "[1.0.3351.48, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

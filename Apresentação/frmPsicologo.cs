@@ -15,8 +15,9 @@ namespace Apresentação
         private int modo = 0;
         internal DataTable dt;
 
+        private frmInicial parentForm;
 
-        public frmPsicologo()
+        public frmPsicologo(frmInicial parent)
         {
             InitializeComponent();
             _psicologoService = new PsicologoService();
@@ -24,6 +25,8 @@ namespace Apresentação
             ConfiguraDataGridView();
             carregaGridView();
             Habilita();
+
+            parentForm = parent;
         }
 
         private void ConfiguraDataGridView()
@@ -81,27 +84,18 @@ namespace Apresentação
                     btnEditar.Visible = true;
                     btnExcluir.Visible = true;
                     btnSalvar.Visible = false;
-                    btnVoltar.Visible = true;
-                    grpDados.Visible = false;
-                    dgPsicologo.Visible = true;
+                    btnMostraInativos.Visible = true;
+                    grpDados.Enabled = false;
+                    dgPsicologo.Enabled = true;
                     break;
                 case 1: //inclusão
                     btnInativar.Visible = false;
                     btnEditar.Visible = false;
                     btnExcluir.Visible = false;
                     btnSalvar.Visible = true;
-                    btnVoltar.Visible = true;
-                    grpDados.Visible = true;
-                    dgPsicologo.Visible = false;
-                    break;
-                case 2:
-                    btnInativar.Visible = false;
-                    btnEditar.Visible = false;
-                    btnExcluir.Visible = false;
-                    btnSalvar.Visible = true;
-                    btnVoltar.Visible = true;
-                    grpDados.Visible = true;
-                    dgPsicologo.Visible = false;
+                    btnMostraInativos.Visible = true;
+                    grpDados.Enabled = true;
+                    dgPsicologo.Enabled = false;
                     break;
             }
         }
@@ -149,7 +143,7 @@ namespace Apresentação
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            modo = 2;
+            modo = 1;
             Habilita();
         }
 
@@ -223,17 +217,17 @@ namespace Apresentação
             else*/
             //if (modo == 2)
             //{
-                resultado = _psicologoService.Update(id, nome, cpf, regiao, email);
-                if (resultado == "SUCESSO")
-                {
-                    msg = "PSICOLOGO atualizado com sucesso!";
-                    carregaGridView();
-                }
-                else
-                {
-                    msg = "Falha ao atualizar PSICOLOGO!";
-                }
-                MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            resultado = _psicologoService.Update(id, nome, cpf, regiao, email);
+            if (resultado == "SUCESSO")
+            {
+                msg = "PSICOLOGO atualizado com sucesso!";
+                carregaGridView();
+            }
+            else
+            {
+                msg = "Falha ao atualizar PSICOLOGO!";
+            }
+            MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //}
 
             modo = 0;
