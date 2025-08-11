@@ -1,6 +1,6 @@
-2025/08/09-19:12:42.323 6684 Reusing MANIFEST C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
-2025/08/09-19:12:42.325 6684 Recovering log #50
-2025/08/09-19:12:42.327 6684 Reusing old log C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/000050.log 
-2025/08/09-19:13:01.569 5ff4 Level-0 table #54: started
-2025/08/09-19:13:01.589 5ff4 Level-0 table #54: 40177 bytes OK
-2025/08/09-19:13:01.592 5ff4 Delete type=0 #50
+2025/08/11-14:29:23.240 9260 Reusing MANIFEST C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
+2025/08/11-14:29:23.242 9260 Recovering log #61
+2025/08/11-14:29:23.244 9260 Reusing old log C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/000061.log 
+2025/08/11-14:30:34.497 bc94 Level-0 table #65: started
+2025/08/11-14:30:34.531 bc94 Level-0 table #65: 64778 bytes OK
+2025/08/11-14:30:34.558 bc94 Delete type=0 #61

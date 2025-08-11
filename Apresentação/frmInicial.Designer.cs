@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicial));
             panel1 = new Panel();
+            btnConfig = new Button();
             btnLogs = new Button();
             btnDashboard = new Button();
             btnModerador = new Button();
@@ -38,8 +39,8 @@
             btnUsuarios = new Button();
             label1 = new Label();
             panel2 = new Panel();
-            pictureBox1 = new PictureBox();
             btnFechar = new Button();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -49,6 +50,7 @@
             // 
             panel1.BackColor = Color.FromArgb(19, 62, 112);
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnConfig);
             panel1.Controls.Add(btnLogs);
             panel1.Controls.Add(btnDashboard);
             panel1.Controls.Add(btnModerador);
@@ -59,6 +61,22 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(230, 1114);
             panel1.TabIndex = 0;
+            // 
+            // btnConfig
+            // 
+            btnConfig.BackColor = Color.FromArgb(19, 62, 112);
+            btnConfig.FlatStyle = FlatStyle.Popup;
+            btnConfig.Font = new Font("Segoe UI Semilight", 11F);
+            btnConfig.ForeColor = Color.FromArgb(226, 239, 239);
+            btnConfig.Image = (Image)resources.GetObject("btnConfig.Image");
+            btnConfig.ImageAlign = ContentAlignment.MiddleLeft;
+            btnConfig.Location = new Point(0, 329);
+            btnConfig.Name = "btnConfig";
+            btnConfig.Size = new Size(233, 40);
+            btnConfig.TabIndex = 7;
+            btnConfig.Text = "Confiigurações";
+            btnConfig.UseVisualStyleBackColor = false;
+            btnConfig.Click += btnConfig_Click;
             // 
             // btnLogs
             // 
@@ -183,16 +201,6 @@
             panel2.Size = new Size(1500, 86);
             panel2.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources._64_Sem_Título_20240908014550;
-            pictureBox1.Location = new Point(0, -17);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(233, 132);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            // 
             // btnFechar
             // 
             btnFechar.BackColor = Color.FromArgb(226, 239, 239);
@@ -204,6 +212,16 @@
             btnFechar.TabIndex = 7;
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click_1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources._64_Sem_Título_20240908014550;
+            pictureBox1.Location = new Point(0, -17);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(233, 132);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
             // 
             // frmInicial
             // 
@@ -221,7 +239,6 @@
             Name = "frmInicial";
             RightToLeft = RightToLeft.No;
             StartPosition = FormStartPosition.CenterScreen;
-            WindowState = FormWindowState.Minimized;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -243,5 +260,6 @@
         private Button btnDashboard;
         private Button btnLogs;
         private Button btnFechar;
+        private Button btnConfig;
     }
 }

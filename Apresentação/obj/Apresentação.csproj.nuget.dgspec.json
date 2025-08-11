@@ -71,7 +71,7 @@
             },
             "Microsoft.Web.WebView2": {
               "target": "Package",
-              "version": "[1.0.3351.48, )"
+              "version": "[1.0.3405.78, )"
             }
           },
           "imports": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bKD4b7c6F3Q=",
+  "dgSpecHash": "W5v9xI9MVEY=",
   "success": true,
   "projectFilePath": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresentação\\Apresentação.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,7 @@
     "C:\\Users\\Cat\\.nuget\\packages\\mailkit\\4.13.0\\mailkit.4.13.0.nupkg.sha512",
     "C:\\Users\\Cat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Cat\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
-    "C:\\Users\\Cat\\.nuget\\packages\\microsoft.web.webview2\\1.0.3351.48\\microsoft.web.webview2.1.0.3351.48.nupkg.sha512",
+    "C:\\Users\\Cat\\.nuget\\packages\\microsoft.web.webview2\\1.0.3405.78\\microsoft.web.webview2.1.0.3405.78.nupkg.sha512",
     "C:\\Users\\Cat\\.nuget\\packages\\mimekit\\4.13.0\\mimekit.4.13.0.nupkg.sha512",
     "C:\\Users\\Cat\\.nuget\\packages\\mysql.data\\9.1.0\\mysql.data.9.1.0.nupkg.sha512",
     "C:\\Users\\Cat\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

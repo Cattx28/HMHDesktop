@@ -35,7 +35,11 @@ namespace Apresentação
             parentForm = parent;
         }
 
-        private void EnviarEmail(string email,string assunto, string body)
+        public frmModerador()
+        {
+        }
+
+        public void EnviarEmail(string email,string assunto, string body)
         {
             try
             {
@@ -58,34 +62,6 @@ namespace Apresentação
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
-                /*try
-                {
-                    using (SmtpClient smtp = new SmtpClient())
-                    {
-                        using (MailMessage email = new MailMessage())
-                        {
-                            smtp.Host = "smtp.gmail.com";
-                            smtp.UseDefaultCredentials = false;
-                            smtp.Credentials = new System.Net.NetworkCredential("helpmentalhealthhmh@gmail.com", "cl203018@");
-                            smtp.Port = 465;
-                            smtp.EnableSsl = true;
-
-                            email.From = new MailAddress(txtEmail.Text);
-                            email.To.Add(txtEmail.Text);
-
-                            email.Subject = assunto;
-                            email.IsBodyHtml = false;
-                            email.Body = body;
-
-                            smtp.Send(email);
-                        }
-                    }
-                    MessageBox.Show("Email enviado.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro: " + ex.Message);
-                }*/
             }
 
         private void ConfiguraDataGridView()
@@ -265,16 +241,17 @@ namespace Apresentação
             
             if (modo == 1)
             {
-                resultado = _moderadorService.Update(null, nome, email, senhaHash);
+                resultado = _moderadorService.Insert(null, nome, email, senhaHash);
 
 
                 if (resultado == "SUCESSO")
                 {
                     msg = "MODERADOR cadastrado com sucesso!";
                     carregaGridView();
+
                     EnviarEmail(email,"Novo cadastro Moderador HelpMentalHealth",
                         "Parabéns você acaba de´fazer parte da equipe de moderação do HelpMentalHealth!!!\n\n" +
-                        "Acesse seu perfil com nome de login (" + nome + ") ou email (" + email + ") e senha( " + senha + ").");
+                        "Acesse seu perfil com nome de login (" + nome + ") ou email (" + email + ") e senha (" + senha + ").");
                 }
                 else
                 {
@@ -284,7 +261,7 @@ namespace Apresentação
             }
             else if (modo == 2)
             {
-                resultado = _moderadorService.Update(id, nome, email, senhaHash);
+                resultado = _moderadorService.Update(id, nome, email);
                 if (resultado == "SUCESSO")
                 {
                     msg = "MODERADOR atualizado com sucesso!";
@@ -293,7 +270,7 @@ namespace Apresentação
                     //Motivo
                     frmMotivo motivo = new frmMotivo();
                     motivo.ShowDialog();
-                    string? body = motivo.Motivo;
+                    string? body ="Por motivos de: " + motivo.Motivo;
 
                     EnviarEmail(email,"Atualização de conta Moderador HelpMentalHealth", body);
                 }
@@ -321,7 +298,7 @@ namespace Apresentação
                 //Motivo
                 frmMotivo motivo = new frmMotivo();
                 motivo.ShowDialog();
-                string? body = motivo.Motivo;
+                string? body = "Por motivos de: " + motivo.Motivo;
                 EnviarEmail(txtEmail.Text, "Exclusão de conta Moderador HelpMentalHealth", body);
 
                 int.TryParse(txtId.Text, out int id);

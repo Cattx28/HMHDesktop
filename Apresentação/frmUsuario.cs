@@ -192,31 +192,18 @@ namespace Apresentação
                     }
                 }
             }
-
-
-            /*if (modo == 1)
-            {
-                resultado = _usuarioService.Update(null, nome, email, senha);
-
-
-                if (resultado == "SUCESSO")
-                {
-                    msg = "MODERADOR cadastrado com sucesso!";
-                    carregaGridView();
-                }
-                else
-                {
-                    msg = "Falha ao cadastrar MODERADOR!";
-                }
-                MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else*/
-            //if (modo == 1)
-            //{
                 resultado = _usuarioService.Update(id, nome, idade, email);
                 if (resultado == "SUCESSO")
                 {
-                    msg = "USUÁRIO atualizado com sucesso!";
+                //Motivo
+                frmMotivo motivo = new frmMotivo();
+                motivo.ShowDialog();
+                string? body = "Por motivos de: " + motivo.Motivo;
+
+                frmModerador moderador = new frmModerador();
+                moderador.EnviarEmail(email, "Sua Conta no HelpMentalHealth foi atualizada", body);
+
+                msg = "USUÁRIO atualizado com sucesso!";
                     carregaGridView();
                 }
                 else
@@ -224,7 +211,6 @@ namespace Apresentação
                     msg = "Falha ao atualizar USUÁRIO!";
                 }
                 MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
 
             modo = 0;
             Habilita();
@@ -244,6 +230,14 @@ namespace Apresentação
                 int.TryParse(txtId.Text, out int id);
 
                 resultado = _usuarioService.Delete(id);
+
+                //Motivo
+                frmMotivo motivo = new frmMotivo();
+                motivo.ShowDialog();
+                string? body = "Por motivos de: " + motivo.Motivo;
+
+                frmModerador moderador = new frmModerador();
+                moderador.EnviarEmail(txtEmail.Text, "Sua Conta no HelpMentalHealth foi excluída", body);
 
                 if (resultado == "SUCESSO")
                 {
@@ -278,6 +272,15 @@ namespace Apresentação
                 int.TryParse(txtId.Text, out int id);
 
                 resultado = _usuarioService.Inative(id);
+
+                //Motivo
+                frmMotivo motivo = new frmMotivo();
+                motivo.ShowDialog();
+                string? body = "Por motivos de: " + motivo.Motivo;
+
+                frmModerador moderador = new frmModerador();
+                moderador.EnviarEmail(txtEmail.Text, "Sua Conta no HelpMentalHealth foi inativada", body);
+
 
                 if (resultado == "SUCESSO")
                 {

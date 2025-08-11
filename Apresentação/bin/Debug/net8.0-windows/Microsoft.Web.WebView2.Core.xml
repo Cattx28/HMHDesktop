@@ -1350,6 +1350,7 @@
             <summary></summary>
             <summary></summary>
             <summary></summary>
+            <summary></summary>
         </member>
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2.BrowserProcessId">
             <summary>
@@ -2051,6 +2052,9 @@
             </summary><remarks>
             If a deferral is not taken on the event args, the subsequent scripts are blocked until the event handler returns. If a deferral is taken, the scripts are blocked until the deferral is completed.
             </remarks>
+        </member>
+        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2.Find">
+            <summary>Retrieves the find session interface for the current web view.</summary>
         </member>
         <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2.SaveFileSecurityCheckStarting">
             <summary>This event will be raised during system FileTypePolicy
@@ -3673,6 +3677,8 @@
             <summary></summary>
             <summary></summary>
             <summary></summary>
+            <summary>Interface that provides methods related to the environment settings of CoreWebView2.
+            This interface allows for the creation of new `FindOptions` objects.</summary>
             <summary></summary>
             <summary></summary>
             <summary></summary>
@@ -3865,6 +3871,11 @@
             Once the object is passed to web content, the path must point to a directory as if it was chosen via
             [directory picker](https://developer.mozilla.org/docs/Web/API/Window/showDirectoryPicker)
             otherwise any IO operation done on the `FileSystemDirectoryHandle` will throw a DOM exception.</summary>
+        </member>
+        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateFindOptions">
+            <summary>Creates a new instance of a CoreWebView2FindOptions object.
+            This find options object can be used to define parameters for a find session.
+            Returns the newly created FindOptions object.</summary>
         </member>
         <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Environment.CreateWebResourceRequest(System.String,System.String,System.IO.Stream,System.String)">
             <summary>
@@ -4474,6 +4485,110 @@
         </member>
         <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2FileSystemHandle.Permission">
             <summary>The permissions granted to the FileSystemHandle.</summary>
+        </member>
+        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2Find">
+            <summary>Interface providing methods and properties for finding and navigating through text in the web view.
+            This interface allows for finding text, navigation between matches, and customization of the find UI.</summary>
+        </member>
+        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Find.ActiveMatchIndex">
+            <summary>Retrieves the index of the currently active match in the find session. Returns the index of the currently active match, or -1 if there is no active match.
+            The index starts at 1 for the first match.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2Find.MatchCount">
+            <summary>Gets the total count of matches found in the current document based on the last find sessions criteria. Returns the total count of matches.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2Find.ActiveMatchIndexChanged">
+            <summary>Registers an event handler for the ActiveMatchIndexChanged event. This event is raised when the index of the currently active match changes.
+            This can happen when the user navigates to a different match or when the active match is changed programmatically.
+            The parameter is the event handler to be added. Returns a token representing the added event handler.
+            This token can be used to unregister the event handler.</summary>
+        </member>
+        <member name="E:Microsoft.Web.WebView2.Core.CoreWebView2Find.MatchCountChanged">
+            <summary>Registers an event handler for the MatchCountChanged event.
+            This event is raised when the total count of matches in the document changes due to a new find session or changes in the document.
+            The parameter is the event handler to be added. Returns a token representing the added event handler. This token can be used to unregister the event handler.</summary>
+        </member>
+        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Find.StartAsync(Microsoft.Web.WebView2.Core.CoreWebView2FindOptions)">
+            <summary>Initiates a find using the specified find options asynchronously.
+            Displays the Find bar and starts the find session. If a find session was already ongoing, it will be stopped and replaced with this new instance.
+            If called with an empty string, the Find bar is displayed but no finding occurs. Changing the FindOptions object after initiation won't affect the ongoing find session.
+            To change the ongoing find session, Start must be called again with a new or modified FindOptions object.
+            Start supports HTML and TXT document queries. In general, this API is designed for text-based find sessions.
+            If you start a find session programmatically on another file format that doesn't have text fields, the find session will try to execute but will fail to find any matches. (It will silently fail)
+            Note: The asynchronous action completes when the UI has been displayed with the find term in the UI bar, and the matches have populated on the counter on the find bar.
+            There may be a slight latency between the UI display and the matches populating in the counter.
+            The MatchCountChanged and ActiveMatchIndexChanged events are only raised after Start has completed; otherwise, they will have their default values (-1 for active match index and 0 for match count).
+            To start a new find session (beginning the search from the first match), call `Stop` before invoking `Start`.
+            If `Start` is called consecutively with the same options and without calling `Stop`, the find session
+            will continue from the current position in the existing session.
+            Calling `Start` without altering its parameters will behave either as `FindNext` or `FindPrevious`, depending on the most recent search action performed.
+            Start will default to forward if neither have been called.
+            However, calling Start again during an ongoing find session does not resume from the point
+            of the current active match. For example, given the text "1 1 A 1 1" and initiating a find session for "A",
+            then starting another find session for "1", it will start searching from the beginning of the document,
+            regardless of the previous active match. This behavior indicates that changing the find query initiates a
+            completely new find session, rather than continuing from the previous match index.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Find.FindNext">
+            <summary>Navigates to the next match in the document.
+            If there are no matches to find, FindNext will wrap around to the first match's index.
+            If called when there is no find session active, FindNext will silently fail.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Find.FindPrevious">
+            <summary>Navigates to the previous match in the document.
+            If there are no matches to find, FindPrevious will wrap around to the last match's index.
+            If called when there is no find session active, FindPrevious will silently fail.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Web.WebView2.Core.CoreWebView2Find.Stop">
+            <summary>Stops the current 'Find' session and hides the Find bar.
+            If called with no Find session active, it will silently do nothing.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2FindOptions">
+            <summary>Interface defining the find options.
+            This interface provides the necessary methods and properties to configure a find session.</summary>
+        </member>
+        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2FindOptions.FindTerm">
+            <summary>Gets or sets the word or phrase to be searched in the current page.
+            You can set `FindTerm` to any text you want to find on the page. 
+            This will take effect the next time you call the `Start()` method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2FindOptions.IsCaseSensitive">
+            <summary>Determines if the find session is case sensitive. Returns TRUE if the find is case sensitive, FALSE otherwise.
+            When toggling case sensitivity, the behavior can vary by locale, which may be influenced by both the browser's UI locale and the document's language settings. The browser's UI locale
+            typically provides a default handling approach, while the document's language settings (e.g., specified using the HTML lang attribute) can override these defaults to apply locale-specific rules. This dual consideration
+            ensures that text is processed in a manner consistent with user expectations and the linguistic context of the content.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2FindOptions.ShouldHighlightAllMatches">
+            <summary>Gets or sets the state of whether all matches are highlighted.
+            Returns TRUE if all matches are highlighted, FALSE otherwise.
+            Note: Changes to this property take effect only when Start, FindNext, or FindPrevious is called.
+            Preferences for the session cannot be updated unless another call to the Start function on the server-side is made.
+            Therefore, changes will not take effect until one of these functions is called.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2FindOptions.ShouldMatchWord">
+            <summary>Similar to case sensitivity, word matching also can vary by locale, which may be influenced by both the browser's UI locale and the document's language settings. The browser's UI locale
+            typically provides a default handling approach, while the document's language settings (e.g., specified using the HTML lang attribute) can override these defaults to apply locale-specific rules. This dual consideration
+            ensures that text is processed in a manner consistent with user expectations and the linguistic context of the content.
+            ShouldMatchWord determines if only whole words should be matched during the find session. Returns TRUE if only whole words should be matched, FALSE otherwise.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Web.WebView2.Core.CoreWebView2FindOptions.SuppressDefaultFindDialog">
+            <summary>Sets this property to hide the default Find UI.
+            You can use this to hide the default UI so that you can show your own custom UI or programmatically interact with the Find API while showing no Find UI.
+            Returns TRUE if hiding the default Find UI and FALSE if using showing the default Find UI.
+            Note: Changes to this property take effect only when Start, FindNext, or FindPrevious is called.
+            Preferences for the session cannot be updated unless another call to the Start function on the server-side is made.
+            Therefore, changes will not take effect until one of these functions is called.
+            </summary>
         </member>
         <member name="T:Microsoft.Web.WebView2.Core.CoreWebView2Frame">
             <summary>

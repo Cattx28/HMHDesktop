@@ -133,7 +133,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Web.WebView2/1.0.3351.48": {
+      "Microsoft.Web.WebView2/1.0.3405.78": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
@@ -847,10 +847,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Web.WebView2/1.0.3351.48": {
-      "sha512": "UIzXdl3x3H2MX2es7+BHYT3pLkLoT7090omqla9S3MQQCma0slwiY+CXBM6x0LmdLTpksoQ6XUqOAXrtxjtklQ==",
+    "Microsoft.Web.WebView2/1.0.3405.78": {
+      "sha512": "ceiIKuPHnzOf5CUv9nGpIBx0CWCCMWcBdv05QuonmUnpPtm6XDyAh6osgvin7MTpVD5O0+NbS5ts/WU9sgXgvA==",
       "type": "package",
-      "path": "microsoft.web.webview2/1.0.3351.48",
+      "path": "microsoft.web.webview2/1.0.3405.78",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -896,7 +896,7 @@
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.xml",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.xml",
-        "microsoft.web.webview2.1.0.3351.48.nupkg.sha512",
+        "microsoft.web.webview2.1.0.3405.78.nupkg.sha512",
         "microsoft.web.webview2.nuspec",
         "runtimes/win-arm64/native/WebView2Loader.dll",
         "runtimes/win-arm64/native_uap/Microsoft.Web.WebView2.Core.dll",
@@ -2050,7 +2050,7 @@
       "Dados >= 1.0.0",
       "FluentValidation >= 12.0.0",
       "MailKit >= 4.13.0",
-      "Microsoft.Web.WebView2 >= 1.0.3351.48",
+      "Microsoft.Web.WebView2 >= 1.0.3405.78",
       "Negocio >= 1.0.0"
     ]
   },
@@ -2125,7 +2125,7 @@
           },
           "Microsoft.Web.WebView2": {
             "target": "Package",
-            "version": "[1.0.3351.48, )"
+            "version": "[1.0.3405.78, )"
           }
         },
         "imports": [

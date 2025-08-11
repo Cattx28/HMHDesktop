@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7234D662-1AF0-418C-B9D2-CF4213A4CB4C}|Dados\\Dados.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\dados\\moderadorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7234D662-1AF0-418C-B9D2-CF4213A4CB4C}|Dados\\Dados.csproj|solutionrelative:dados\\moderadorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmmoderador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmmoderador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmmotivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmmotivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\apresenta\u00E7\u00E3o\\frmperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmbusca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmbusca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmbusca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmbusca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmmoderador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmmoderador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\frmmotivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\frmmotivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|c:\\users\\cat\\desktop\\helpmentalhealth\\apresenta\u00E7\u00E3o\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2CC5E60-CD6F-486C-A4EA-9C86ADC7C50F}|Apresenta\u00E7\u00E3o\\Apresenta\u00E7\u00E3o.csproj|solutionrelative:apresenta\u00E7\u00E3o\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,19 +26,34 @@
       "DocumentGroups": [
         {
           "DockedHeight": 20,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ModeradorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Dados\\ModeradorRepository.cs",
-              "RelativeDocumentMoniker": "Dados\\ModeradorRepository.cs",
-              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Dados\\ModeradorRepository.cs",
-              "RelativeToolTip": "Dados\\ModeradorRepository.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAwwDQAAABDAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmLogin.cs",
+              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmLogin.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T02:11:11.475Z",
+              "WhenOpened": "2025-08-11T17:15:56.704Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmPerfil.cs",
+              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmPerfil.cs",
+              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmPerfil.cs",
+              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmPerfil.cs*",
+              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmPerfil.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowBkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T17:12:20.034Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -64,76 +67,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frmBusca.cs",
-              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmBusca.cs",
-              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmBusca.cs",
-              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmBusca.cs",
-              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmBusca.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAIA3wA8AAAAMAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\Program.cs",
+              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\Program.cs",
+              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\Program.cs",
+              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T01:56:25.954Z",
+              "WhenOpened": "2025-08-11T17:28:03.385Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmBusca.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmBusca.cs",
-              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmBusca.cs",
-              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmBusca.cs [Projeto]",
-              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmBusca.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T01:56:22.653Z",
-              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmMotivo.cs",
-              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmMotivo.cs",
-              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmMotivo.cs",
-              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmMotivo.cs",
-              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmMotivo.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBkAAAAbAAAAAAAAAA==",
+              "Title": "frmPerfil.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmPerfil.cs",
+              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmPerfil.cs",
+              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmPerfil.cs [Projeto]*",
+              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmPerfil.cs [Projeto]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T01:56:05.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmModerador.cs",
-              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmModerador.cs",
-              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmModerador.cs",
-              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmModerador.cs*",
-              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmModerador.cs*",
-              "ViewState": "AgIAAA4BAAAAAAAAAAAuwCABAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T23:40:15.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmMotivo.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmMotivo.cs",
-              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmMotivo.cs",
-              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmMotivo.cs [Projeto]",
-              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmMotivo.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T01:02:37.821Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmModerador.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmModerador.cs",
-              "RelativeDocumentMoniker": "Apresenta\u00E7\u00E3o\\frmModerador.cs",
-              "ToolTip": "C:\\Users\\Cat\\Desktop\\HelpMentalHealth\\Apresenta\u00E7\u00E3o\\frmModerador.cs [Projeto]*",
-              "RelativeToolTip": "Apresenta\u00E7\u00E3o\\frmModerador.cs [Projeto]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T23:39:48.282Z",
+              "WhenOpened": "2025-08-11T12:29:05.468Z",
               "EditorCaption": " [Projeto]"
             }
           ]

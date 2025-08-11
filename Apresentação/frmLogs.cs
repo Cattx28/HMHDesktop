@@ -14,10 +14,6 @@ namespace Apresentação
     {
         private frmInicial parentfrm;
 
-        public frmLogs()
-        {
-        }
-
         public frmLogs(frmInicial parent)
         {
             InitializeComponent();

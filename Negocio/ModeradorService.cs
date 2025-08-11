@@ -17,7 +17,7 @@ namespace Negocio
             _repository = new ModeradorRepository();
         }
 
-        public string Update(int? id, string nome, string email, string senha)
+        public string Update(int? id, string nome, string email)
         {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
@@ -27,18 +27,21 @@ namespace Negocio
                 id = id,
                 nome = nome,
                 email = email,
+            };
+
+                return _repository.Update(moderador);
+        }
+
+        public string Insert(int? id, string nome, string email, string senha)
+        {
+            var moderador = new Moderador
+            {
+                id = id,
+                nome = nome,
+                email = email,
                 senha = senha
             };
 
-            if (id == null)
-                return _repository.Insert(moderador);
-            else
-                return _repository.Update(moderador);
-
-        }
-
-        public string Insert(Moderador moderador)
-        {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 

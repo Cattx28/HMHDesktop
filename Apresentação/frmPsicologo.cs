@@ -1,9 +1,10 @@
 ﻿using Dados;
-using Negocio;
-using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
-using System.Data;
-using System.ComponentModel.DataAnnotations;
 using FluentValidation.Results;
+using Negocio;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Apresentação
 {
@@ -197,29 +198,17 @@ namespace Apresentação
                 }
             }
 
-
-            /*if (modo == 1)
-            {
-                resultado = _psicologoService.Update(null, nome, email, senha);
-
-
-                if (resultado == "SUCESSO")
-                {
-                    msg = "MODERADOR cadastrado com sucesso!";
-                    carregaGridView();
-                }
-                else
-                {
-                    msg = "Falha ao cadastrar MODERADOR!";
-                }
-                MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else*/
-            //if (modo == 2)
-            //{
             resultado = _psicologoService.Update(id, nome, cpf, regiao, email);
             if (resultado == "SUCESSO")
             {
+                //Motivo
+                frmMotivo motivo = new frmMotivo();
+                motivo.ShowDialog();
+                string? body = "Por motivos de: " + motivo.Motivo;
+
+                frmModerador moderador = new frmModerador();
+                moderador.EnviarEmail(email, "Sua Conta no HelpMentalHealth foi atualizada", body);
+
                 msg = "PSICOLOGO atualizado com sucesso!";
                 carregaGridView();
             }
@@ -228,7 +217,6 @@ namespace Apresentação
                 msg = "Falha ao atualizar PSICOLOGO!";
             }
             MessageBox.Show(msg, "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
 
             modo = 0;
             Habilita();
@@ -243,6 +231,14 @@ namespace Apresentação
             resposta = MessageBox.Show("Confirma exclusão?", "Aviso do sistema!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (resposta == DialogResult.OK)
             {
+                //Motivo
+                frmMotivo motivo = new frmMotivo();
+                motivo.ShowDialog();
+                string? body = "Por motivos de: " + motivo.Motivo;
+
+                frmModerador moderador = new frmModerador();
+                moderador.EnviarEmail(txtEmail.Text, "Sua Conta no HelpMentalHealth foi excluída", body);
+
 
                 int.TryParse(txtId.Text, out int id);
 
@@ -277,6 +273,14 @@ namespace Apresentação
             resposta = MessageBox.Show("Confirma inativação?", "Aviso do sistema!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (resposta == DialogResult.OK)
             {
+                //Motivo
+                frmMotivo motivo = new frmMotivo();
+                motivo.ShowDialog();
+                string? body = "Por motivos de: " + motivo.Motivo;
+
+                frmModerador moderador = new frmModerador();
+                moderador.EnviarEmail(txtEmail.Text, "Sua Conta no HelpMentalHealth foi inativada", body);
+
 
                 int.TryParse(txtId.Text, out int id);
 

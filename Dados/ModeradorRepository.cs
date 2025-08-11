@@ -50,7 +50,7 @@ namespace Dados
                 Conexao.getConnection();
 
                 string updateSql = "UPDATE Moderador SET " +
-                                    "nome = @pNome, email = @pEmail, senha = @pSenha " +
+                                    "nome = @pNome, email = @pEmail " +
                                     "WHERE idModerador = @pId ";
 
                 MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(updateSql, Conexao.SqlCon);
@@ -58,7 +58,6 @@ namespace Dados
                 SqlCmd.Parameters.AddWithValue("@pId", moderador.id);
                 SqlCmd.Parameters.AddWithValue("@pNome", moderador.nome);
                 SqlCmd.Parameters.AddWithValue("@pEmail", moderador.email);
-                SqlCmd.Parameters.AddWithValue("@pSenha", moderador.senha);
 
                 resp = SqlCmd.ExecuteNonQuery() == 1 ? "SUCESSO" : "FALHA";
             }

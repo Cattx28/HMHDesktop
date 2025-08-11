@@ -142,5 +142,24 @@ namespace Apresentação
         {
             Close();
         }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<frmPerfil>().Count() == 0)
+            {
+                frmPerfil filhoPerfil = new(this);
+                filhoPerfil.MdiParent = this;
+                filhos.Add(filhoPerfil);
+                filhoPerfil.Show();
+
+                Posicao(filhoPerfil);
+            }
+            else
+            {
+                frmPerfil filhoPerfil = Application.OpenForms.OfType<frmPerfil>().First();
+                filhoPerfil.BringToFront();
+                Posicao(filhoPerfil);
+            }
+        }
     }
 }

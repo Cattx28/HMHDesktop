@@ -25,6 +25,9 @@
     <Compile Update="frmMotivo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>

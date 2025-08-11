@@ -35,7 +35,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(208, 226, 241);
-            ClientSize = new Size(1370, 714);
+            ClientSize = new Size(1090, 800);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmLogs";
             StartPosition = FormStartPosition.WindowsDefaultBounds;

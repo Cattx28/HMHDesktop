@@ -24,18 +24,6 @@ namespace Apresentação
                 blueGradientProgressBar1.Value = percent;
             }
         }
-
-        /*private void timer1_Tick(object sender, EventArgs e)
-        {
-            panelProgress.Width += 3;
-
-            if (panelProgress.Width >= panel1.Width)
-            {
-
-                timer1.Stop();
-                this.Close();
-            }
-        }*/
     }
 
 }
