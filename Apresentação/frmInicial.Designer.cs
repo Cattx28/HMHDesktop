@@ -174,8 +174,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(180, 202, 232);
-            panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(btnFechar);
+            panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
@@ -195,16 +195,15 @@
             // 
             // btnFechar
             // 
-            btnFechar.BackColor = Color.FromArgb(180, 202, 232);
+            btnFechar.BackColor = Color.FromArgb(226, 239, 239);
             btnFechar.BackgroundImage = (Image)resources.GetObject("btnFechar.BackgroundImage");
-            btnFechar.BackgroundImageLayout = ImageLayout.Center;
-            btnFechar.FlatStyle = FlatStyle.Flat;
-            btnFechar.Location = new Point(1441, 25);
+            btnFechar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnFechar.Location = new Point(1431, 25);
             btnFechar.Name = "btnFechar";
-            btnFechar.Size = new Size(40, 38);
-            btnFechar.TabIndex = 6;
+            btnFechar.Size = new Size(40, 41);
+            btnFechar.TabIndex = 7;
             btnFechar.UseVisualStyleBackColor = false;
-            btnFechar.Click += btnFechar_Click;
+            btnFechar.Click += btnFechar_Click_1;
             // 
             // frmInicial
             // 
@@ -239,10 +238,10 @@
         private Button btnDenuncias;
         private Label label1;
         private Panel panel2;
-        private Button btnFechar;
         private Button btnModerador;
         private PictureBox pictureBox1;
         private Button btnDashboard;
         private Button btnLogs;
+        private Button btnFechar;
     }
 }

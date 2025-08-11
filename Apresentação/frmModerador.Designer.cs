@@ -35,8 +35,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModerador));
             dgModerador = new DataGridView();
             grpDados = new GroupBox();
-            txtSenha = new TextBox();
-            label5 = new Label();
             txtEmail = new TextBox();
             label4 = new Label();
             txtNome = new TextBox();
@@ -49,6 +47,8 @@
             btnEditar = new Button();
             btnSalvar = new Button();
             btnVoltar = new Button();
+            txtSenha = new TextBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgModerador).BeginInit();
             grpDados.SuspendLayout();
             SuspendLayout();
@@ -116,29 +116,6 @@
             grpDados.Size = new Size(922, 159);
             grpDados.TabIndex = 1;
             grpDados.TabStop = false;
-            // 
-            // txtSenha
-            // 
-            txtSenha.BackColor = Color.FromArgb(208, 226, 241);
-            txtSenha.BorderStyle = BorderStyle.FixedSingle;
-            txtSenha.Cursor = Cursors.IBeam;
-            txtSenha.Font = new Font("Segoe UI Semilight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSenha.ForeColor = Color.FromArgb(38, 68, 102);
-            txtSenha.Location = new Point(644, 113);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(252, 30);
-            txtSenha.TabIndex = 10;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11F);
-            label5.ForeColor = Color.FromArgb(38, 68, 102);
-            label5.Location = new Point(571, 114);
-            label5.Name = "label5";
-            label5.Size = new Size(75, 25);
-            label5.TabIndex = 27;
-            label5.Text = "SENHA:";
             // 
             // txtEmail
             // 
@@ -298,6 +275,30 @@
             btnVoltar.UseVisualStyleBackColor = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // txtSenha
+            // 
+            txtSenha.BackColor = Color.FromArgb(208, 226, 241);
+            txtSenha.BorderStyle = BorderStyle.FixedSingle;
+            txtSenha.Cursor = Cursors.IBeam;
+            txtSenha.Font = new Font("Segoe UI Semilight", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSenha.ForeColor = Color.FromArgb(38, 68, 102);
+            txtSenha.Location = new Point(644, 113);
+            txtSenha.Name = "txtSenha";
+            txtSenha.Size = new Size(252, 30);
+            txtSenha.TabIndex = 10;
+            txtSenha.UseSystemPasswordChar = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11F);
+            label5.ForeColor = Color.FromArgb(38, 68, 102);
+            label5.Location = new Point(571, 114);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 25);
+            label5.TabIndex = 27;
+            label5.Text = "SENHA:";
+            // 
             // frmModerador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -332,13 +333,13 @@
         private Button btnSalvar;
         private Button btnVoltar;
         private Button btnBuscar;
-        private TextBox txtSenha;
-        private Label label5;
         private TextBox txtEmail;
         private Label label4;
         private TextBox txtNome;
         private Label label2;
         private TextBox txtId;
         private Label label1;
+        private TextBox txtSenha;
+        private Label label5;
     }
 }

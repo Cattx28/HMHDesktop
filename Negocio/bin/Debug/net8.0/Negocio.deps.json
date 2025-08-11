@@ -9,7 +9,6 @@
       "Negocio/1.0.0": {
         "dependencies": {
           "Dados": "1.0.0",
-          "Microsoft.Web.WebView2": "1.0.3351.48",
           "Microsoft.Web.WebView2.Core": "1.0.3351.48",
           "Microsoft.Web.WebView2.WinForms": "1.0.3351.48",
           "Microsoft.Web.WebView2.Wpf": "1.0.3351.48"

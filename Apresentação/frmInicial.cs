@@ -1,4 +1,5 @@
 ﻿using ZstdSharp.Unsafe;
+using System.Net.Mail;
 
 namespace Apresentação
 {
@@ -94,11 +95,6 @@ namespace Apresentação
             }
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -127,7 +123,7 @@ namespace Apresentação
         {
             if (Application.OpenForms.OfType<frmLogs>().Count() == 0)
             {
-                frmLogs filhoLogs = new (this);
+                frmLogs filhoLogs = new(this);
                 filhoLogs.MdiParent = this;
                 filhos.Add(filhoLogs);
                 filhoLogs.Show();
@@ -140,6 +136,11 @@ namespace Apresentação
                 filhoLogs.BringToFront();
                 Posicao(filhoLogs);
             }
+        }
+
+        private void btnFechar_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -1,9 +1,13 @@
 ﻿using Dados;
 using FluentValidation.Results;
+using MailKit.Net.Smtp;
+using MailKit.Security;
+using MimeKit;
 using Negocio;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Diagnostics;
+using System.Net;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
@@ -31,9 +35,58 @@ namespace Apresentação
             parentForm = parent;
         }
 
-        public frmModerador()
+        private void EnviarEmail(string email,string assunto, string body)
         {
-        }
+            try
+            {
+                var mensagem = new MimeMessage();
+                mensagem.From.Add(new MailboxAddress("HelpMentalHealth", "helpmentalhealthhmh@gmail.com"));
+                mensagem.To.Add(new MailboxAddress("Moderador(a)", email));
+                mensagem.Subject = assunto;
+                mensagem.Body = new TextPart("plain") { Text = body };
+
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                using (var smtpclient = new SmtpClient())
+                {
+                    smtpclient.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+                    smtpclient.Authenticate("helpmentalhealthhmh@gmail.com", "ejxn axnb ezxr qczq");
+
+                    smtpclient.Send(mensagem);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+                /*try
+                {
+                    using (SmtpClient smtp = new SmtpClient())
+                    {
+                        using (MailMessage email = new MailMessage())
+                        {
+                            smtp.Host = "smtp.gmail.com";
+                            smtp.UseDefaultCredentials = false;
+                            smtp.Credentials = new System.Net.NetworkCredential("helpmentalhealthhmh@gmail.com", "cl203018@");
+                            smtp.Port = 465;
+                            smtp.EnableSsl = true;
+
+                            email.From = new MailAddress(txtEmail.Text);
+                            email.To.Add(txtEmail.Text);
+
+                            email.Subject = assunto;
+                            email.IsBodyHtml = false;
+                            email.Body = body;
+
+                            smtp.Send(email);
+                        }
+                    }
+                    MessageBox.Show("Email enviado.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex.Message);
+                }*/
+            }
 
         private void ConfiguraDataGridView()
         {
@@ -82,6 +135,9 @@ namespace Apresentação
             switch (modo)
             {
                 case 0: //neutro
+                    txtEmail.Enabled = false;
+                    txtSenha.Enabled = false;
+                    txtSenha.UseSystemPasswordChar = true;
                     btnAdicionar.Visible = true;
                     btnEditar.Visible = true;
                     btnExcluir.Visible = true;
@@ -91,6 +147,9 @@ namespace Apresentação
                     dgModerador.Enabled = true;
                     break;
                 case 1: //inclusão
+                    txtEmail.Enabled = true;
+                    txtSenha.Enabled= true;
+                    txtSenha.UseSystemPasswordChar = false;
                     btnAdicionar.Visible = false;
                     btnEditar.Visible = false;
                     btnExcluir.Visible = false;
@@ -100,6 +159,9 @@ namespace Apresentação
                     dgModerador.Enabled = false;
                     break;
                 case 2:
+                    txtEmail.Enabled = false;
+                    txtSenha.Enabled = false;
+                    txtSenha.UseSystemPasswordChar = true;
                     btnAdicionar.Visible = false;
                     btnEditar.Visible = false;
                     btnExcluir.Visible = false;
@@ -200,7 +262,7 @@ namespace Apresentação
                 }
             }
 
-
+            
             if (modo == 1)
             {
                 resultado = _moderadorService.Update(null, nome, email, senhaHash);
@@ -210,6 +272,9 @@ namespace Apresentação
                 {
                     msg = "MODERADOR cadastrado com sucesso!";
                     carregaGridView();
+                    EnviarEmail(email,"Novo cadastro Moderador HelpMentalHealth",
+                        "Parabéns você acaba de´fazer parte da equipe de moderação do HelpMentalHealth!!!\n\n" +
+                        "Acesse seu perfil com nome de login (" + nome + ") ou email (" + email + ") e senha( " + senha + ").");
                 }
                 else
                 {
@@ -224,6 +289,13 @@ namespace Apresentação
                 {
                     msg = "MODERADOR atualizado com sucesso!";
                     carregaGridView();
+
+                    //Motivo
+                    frmMotivo motivo = new frmMotivo();
+                    motivo.ShowDialog();
+                    string? body = motivo.Motivo;
+
+                    EnviarEmail(email,"Atualização de conta Moderador HelpMentalHealth", body);
                 }
                 else
                 {
@@ -246,6 +318,11 @@ namespace Apresentação
 
             if (resposta == DialogResult.OK)
             {
+                //Motivo
+                frmMotivo motivo = new frmMotivo();
+                motivo.ShowDialog();
+                string? body = motivo.Motivo;
+                EnviarEmail(txtEmail.Text, "Exclusão de conta Moderador HelpMentalHealth", body);
 
                 int.TryParse(txtId.Text, out int id);
 

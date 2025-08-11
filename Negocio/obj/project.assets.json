@@ -1825,8 +1825,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Dados >= 1.0.0",
-      "Microsoft.Web.WebView2 >= 1.0.3351.48"
+      "Dados >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1882,12 +1881,6 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
-        "dependencies": {
-          "Microsoft.Web.WebView2": {
-            "target": "Package",
-            "version": "[1.0.3351.48, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

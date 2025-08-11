@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            imgLogo = new PictureBox();
             imgUsuario = new PictureBox();
             imgSenha = new PictureBox();
             txtLogin = new TextBox();
@@ -38,23 +37,13 @@
             label1 = new Label();
             btnEntrar = new Button();
             btnFechar = new Button();
+            imgLogo = new PictureBox();
             imgOlho = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgUsuario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgSenha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgOlho).BeginInit();
             SuspendLayout();
-            // 
-            // imgLogo
-            // 
-            imgLogo.BackColor = Color.Transparent;
-            imgLogo.Image = Properties.Resources._64_Sem_Título_20240825150204;
-            imgLogo.Location = new Point(46, 20);
-            imgLogo.Name = "imgLogo";
-            imgLogo.Size = new Size(361, 217);
-            imgLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            imgLogo.TabIndex = 0;
-            imgLogo.TabStop = false;
             // 
             // imgUsuario
             // 
@@ -88,6 +77,7 @@
             txtLogin.ForeColor = Color.FromArgb(19, 62, 112);
             txtLogin.Location = new Point(81, 285);
             txtLogin.Name = "txtLogin";
+            txtLogin.PlaceholderText = "Nome de Usuário ou Email";
             txtLogin.Size = new Size(326, 31);
             txtLogin.TabIndex = 1;
             // 
@@ -112,6 +102,7 @@
             txtSenha.ForeColor = Color.FromArgb(93, 123, 167);
             txtSenha.Location = new Point(81, 342);
             txtSenha.Name = "txtSenha";
+            txtSenha.PlaceholderText = "Senha";
             txtSenha.Size = new Size(326, 31);
             txtSenha.TabIndex = 2;
             txtSenha.UseSystemPasswordChar = true;
@@ -153,14 +144,23 @@
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click;
             // 
+            // imgLogo
+            // 
+            imgLogo.BackColor = Color.Transparent;
+            imgLogo.Image = Properties.Resources._64_Sem_Título_20240825150204;
+            imgLogo.Location = new Point(46, 20);
+            imgLogo.Name = "imgLogo";
+            imgLogo.Size = new Size(361, 217);
+            imgLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            imgLogo.TabIndex = 0;
+            imgLogo.TabStop = false;
+            // 
             // imgOlho
             // 
-            imgOlho.BackColor = Color.Transparent;
-            imgOlho.Image = Properties.Resources.olho;
-            imgOlho.Location = new Point(365, 340);
+            imgOlho.BackColor = Color.FromArgb(226, 239, 239);
+            imgOlho.Location = new Point(374, 342);
             imgOlho.Name = "imgOlho";
-            imgOlho.Size = new Size(42, 33);
-            imgOlho.SizeMode = PictureBoxSizeMode.Zoom;
+            imgOlho.Size = new Size(33, 33);
             imgOlho.TabIndex = 7;
             imgOlho.TabStop = false;
             imgOlho.Click += imgOlho_Click;
@@ -186,17 +186,15 @@
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LOGIN";
-            ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgUsuario).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgSenha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgOlho).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox imgLogo;
         private PictureBox imgUsuario;
         private PictureBox imgSenha;
         private TextBox txtLogin;
@@ -205,6 +203,7 @@
         private TextBox txtSenha;
         private Button btnEntrar;
         private Button btnFechar;
+        private PictureBox imgLogo;
         private PictureBox imgOlho;
     }
 }
