@@ -1,5 +1,7 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Dapper;
+using MySql.Data.MySqlClient;
 using System.Data;
+using System.Reflection.PortableExecutable;
 using System.Runtime.ConstrainedExecution;
 using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
@@ -72,6 +74,35 @@ namespace Dados
             return resp;
         }
 
+        public string UpdateSenha(Moderador moderador)
+        {
+            string resp = "";
+            try
+            {
+                Conexao.getConnection();
+
+                string updateSql = "UPDATE Moderador SET " +
+                                    "senha = @pSenha " +
+                                    "WHERE idModerador = @pId ";
+
+                MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(updateSql, Conexao.SqlCon);
+
+                SqlCmd.Parameters.AddWithValue("@pId", moderador.id);
+                SqlCmd.Parameters.AddWithValue("@pSenha", moderador.senha);
+
+                resp = SqlCmd.ExecuteNonQuery() == 1 ? "SUCESSO" : "FALHA";
+            }
+            catch (Exception ex)
+            {
+                resp = ex.Message;
+            }
+            finally
+            {
+                Conexao.closeConnection();
+            }
+            return resp;
+        }
+
         public string Delete(int idModerador)
         {
             string resp = " ";
@@ -106,6 +137,12 @@ namespace Dados
             try
             {
                 Conexao.getConnection();
+
+                if (Conexao.SqlCon.State != ConnectionState.Open)
+        {
+            throw new InvalidOperationException("A conexão com o banco de dados não está aberta.");
+        }
+
                 String selectSql = "SELECT * from Moderador";
 
                 MySql.Data.MySqlClient.MySqlCommand SqlCmd = new MySql.Data.MySqlClient.MySqlCommand(selectSql, Conexao.SqlCon);
@@ -116,6 +153,7 @@ namespace Dados
             catch (Exception ex)
             {
                 DtResultado = null;
+                Console.WriteLine("Erro no dt: " + ex.Message);
             }
             finally
             {
@@ -209,6 +247,12 @@ namespace Dados
             try
             {
                 Conexao.getConnection();
+
+                if (Conexao.SqlCon.State != ConnectionState.Open)
+                {
+                    throw new InvalidOperationException("A conexão com o banco de dados não está aberta.");
+                }
+
                 if (pId != null)
                 {
                     selectSql = "SELECT * FROM Moderador " +
@@ -248,27 +292,49 @@ namespace Dados
             try
             {
                 Conexao.getConnection();
+
+                if (Conexao.SqlCon.State != ConnectionState.Open)
+                {
+                    throw new InvalidOperationException("A conexão com o banco de dados não está aberta.");
+                }
+
                 {
                     // Busca apenas o hash armazenado
                     string sql = "SELECT senha FROM Moderador WHERE nome = @pLogin OR email = @pLogin";
 
                     string senhaHash = null;
 
-                    using (var cmd = new MySqlCommand(sql, Conexao.SqlCon))
-                    {
-                        cmd.Parameters.AddWithValue("@pLogin", login);
 
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                senhaHash = reader.GetString("senha");
-                            }
-                        }
+                    MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, Conexao.SqlCon);
+
+                    cmd.Parameters.AddWithValue("@pLogin", login);
+
+                    MySql.Data.MySqlClient.MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        senhaHash = reader.GetString("senha");
                     }
 
-                    // Verifica se encontrou o usuário e se a senha está correta
-                    return senhaHash != null && PasswordHasher.VerifyPassword(senha, senhaHash);
+                    if (senhaHash != null && PasswordHasher.VerifyPassword(senha, senhaHash))
+                    {
+                        // Se a senha estiver correta, busque os dados do usuário
+                        string usuarioSql = "SELECT idModerador, nome, email FROM Moderador WHERE nome = @pLogin OR email = @pLogin";
+                        cmd = new MySqlCommand(usuarioSql, Conexao.SqlCon);
+                        cmd.Parameters.AddWithValue("@pLogin", login);
+                        // Executa o comando para buscar os dados do usuário
+                        reader.Close(); // Fecha o reader anterior antes de abrir um novo
+                        reader = cmd.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            // Usuário encontrado, armazena os dados
+                            UsuarioLogado.Id = reader.GetInt32("idModerador"); 
+                            UsuarioLogado.Nome = reader.GetString("nome"); 
+                            UsuarioLogado.Email = reader.GetString("email");
+                        }
+                        return true; // Login bem-sucedido
+                    }
+                    return false; // Login falhou
                 }
             }
             catch (Exception ex)
@@ -276,8 +342,13 @@ namespace Dados
                 Console.WriteLine("Erro no login: " + ex.Message);
                 return false;
             }
+            finally
+            {
+                Conexao.closeConnection(); // Certifique-se de fechar a conexão
+            }
         }
 
+    
         public bool adm(int adm)
         {
             if (adm == 0) { return false; }

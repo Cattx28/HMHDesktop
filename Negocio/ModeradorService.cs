@@ -32,6 +32,13 @@ namespace Negocio
                 return _repository.Update(moderador);
         }
 
+        public string UpdateSenha(int? id, string senha)
+        {
+            var moderador = new Moderador { id = id, senha = senha };
+
+            return _repository.UpdateSenha(moderador);
+        }
+
         public string Insert(int? id, string nome, string email, string senha)
         {
             var moderador = new Moderador

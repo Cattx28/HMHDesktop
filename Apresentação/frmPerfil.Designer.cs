@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfil));
             grpDados = new GroupBox();
+            txtId = new TextBox();
             txtEmail = new TextBox();
             label6 = new Label();
             txtNome = new TextBox();
@@ -42,6 +44,10 @@
             label3 = new Label();
             btnAtualizarDados = new Button();
             btnMudarSenha = new Button();
+            btnSalvarDados = new Button();
+            btnSalvarSenha = new Button();
+            btnVoltarDados = new Button();
+            btnVoltarSenha = new Button();
             grpDados.SuspendLayout();
             grpSenha.SuspendLayout();
             SuspendLayout();
@@ -49,6 +55,7 @@
             // grpDados
             // 
             grpDados.BackColor = Color.FromArgb(208, 226, 241);
+            grpDados.Controls.Add(txtId);
             grpDados.Controls.Add(txtEmail);
             grpDados.Controls.Add(label6);
             grpDados.Controls.Add(txtNome);
@@ -60,6 +67,13 @@
             grpDados.Size = new Size(1024, 219);
             grpDados.TabIndex = 28;
             grpDados.TabStop = false;
+            // 
+            // txtId
+            // 
+            txtId.Location = new Point(384, 33);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(125, 27);
+            txtId.TabIndex = 26;
             // 
             // txtEmail
             // 
@@ -202,6 +216,7 @@
             btnAtualizarDados.TabIndex = 30;
             btnAtualizarDados.Text = "Atualizar dados";
             btnAtualizarDados.UseVisualStyleBackColor = false;
+            btnAtualizarDados.Click += btnAtualizarDados_Click;
             // 
             // btnMudarSenha
             // 
@@ -209,12 +224,71 @@
             btnMudarSenha.FlatStyle = FlatStyle.Popup;
             btnMudarSenha.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMudarSenha.ForeColor = Color.FromArgb(226, 239, 239);
-            btnMudarSenha.Location = new Point(38, 568);
+            btnMudarSenha.Location = new Point(39, 568);
             btnMudarSenha.Name = "btnMudarSenha";
-            btnMudarSenha.Size = new Size(999, 40);
+            btnMudarSenha.Size = new Size(996, 40);
             btnMudarSenha.TabIndex = 26;
             btnMudarSenha.Text = "Mudar senha";
             btnMudarSenha.UseVisualStyleBackColor = false;
+            btnMudarSenha.Click += btnMudarSenha_Click;
+            // 
+            // btnSalvarDados
+            // 
+            btnSalvarDados.BackColor = Color.FromArgb(19, 62, 112);
+            btnSalvarDados.FlatStyle = FlatStyle.Popup;
+            btnSalvarDados.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalvarDados.ForeColor = Color.FromArgb(226, 239, 239);
+            btnSalvarDados.Location = new Point(39, 255);
+            btnSalvarDados.Name = "btnSalvarDados";
+            btnSalvarDados.Size = new Size(894, 40);
+            btnSalvarDados.TabIndex = 26;
+            btnSalvarDados.Text = "Salvar";
+            btnSalvarDados.UseVisualStyleBackColor = false;
+            btnSalvarDados.Click += btnSalvarDados_Click;
+            // 
+            // btnSalvarSenha
+            // 
+            btnSalvarSenha.BackColor = Color.FromArgb(19, 62, 112);
+            btnSalvarSenha.FlatStyle = FlatStyle.Popup;
+            btnSalvarSenha.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalvarSenha.ForeColor = Color.FromArgb(226, 239, 239);
+            btnSalvarSenha.Location = new Point(39, 568);
+            btnSalvarSenha.Name = "btnSalvarSenha";
+            btnSalvarSenha.Size = new Size(894, 40);
+            btnSalvarSenha.TabIndex = 31;
+            btnSalvarSenha.Text = "Salvar";
+            btnSalvarSenha.UseVisualStyleBackColor = false;
+            btnSalvarSenha.Click += btnSalvarSenha_Click;
+            // 
+            // btnVoltarDados
+            // 
+            btnVoltarDados.BackColor = Color.FromArgb(19, 62, 112);
+            btnVoltarDados.BackgroundImageLayout = ImageLayout.Zoom;
+            btnVoltarDados.FlatStyle = FlatStyle.Popup;
+            btnVoltarDados.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVoltarDados.ForeColor = Color.FromArgb(226, 239, 239);
+            btnVoltarDados.Image = (Image)resources.GetObject("btnVoltarDados.Image");
+            btnVoltarDados.Location = new Point(954, 255);
+            btnVoltarDados.Name = "btnVoltarDados";
+            btnVoltarDados.RightToLeft = RightToLeft.No;
+            btnVoltarDados.Size = new Size(83, 40);
+            btnVoltarDados.TabIndex = 32;
+            btnVoltarDados.UseVisualStyleBackColor = false;
+            // 
+            // btnVoltarSenha
+            // 
+            btnVoltarSenha.BackColor = Color.FromArgb(19, 62, 112);
+            btnVoltarSenha.BackgroundImageLayout = ImageLayout.Zoom;
+            btnVoltarSenha.FlatStyle = FlatStyle.Popup;
+            btnVoltarSenha.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVoltarSenha.ForeColor = Color.FromArgb(226, 239, 239);
+            btnVoltarSenha.Image = (Image)resources.GetObject("btnVoltarSenha.Image");
+            btnVoltarSenha.Location = new Point(954, 568);
+            btnVoltarSenha.Name = "btnVoltarSenha";
+            btnVoltarSenha.RightToLeft = RightToLeft.No;
+            btnVoltarSenha.Size = new Size(83, 40);
+            btnVoltarSenha.TabIndex = 33;
+            btnVoltarSenha.UseVisualStyleBackColor = false;
             // 
             // frmPerfil
             // 
@@ -222,6 +296,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(208, 226, 241);
             ClientSize = new Size(1090, 800);
+            Controls.Add(btnVoltarSenha);
+            Controls.Add(btnVoltarDados);
+            Controls.Add(btnSalvarSenha);
+            Controls.Add(btnSalvarDados);
             Controls.Add(btnMudarSenha);
             Controls.Add(btnAtualizarDados);
             Controls.Add(grpSenha);
@@ -254,5 +332,10 @@
         private Label label3;
         private Button btnAtualizarDados;
         private Button btnMudarSenha;
+        private TextBox txtId;
+        private Button btnSalvarDados;
+        private Button btnSalvarSenha;
+        private Button btnVoltarDados;
+        private Button btnVoltarSenha;
     }
 }

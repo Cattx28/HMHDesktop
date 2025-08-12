@@ -87,3 +87,4 @@ C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Mi
 C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
 C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\obj\Debug\net8.0-windows\Apresentação.frmPerfil.resources
+C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Dapper.dll

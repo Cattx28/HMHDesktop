@@ -53,7 +53,6 @@ namespace Apresentação
 
             if (_moderadorService.acessar(login, senha)) // Envia a senha em texto puro
             {
-                Email = login;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

@@ -251,7 +251,8 @@ namespace Apresentação
 
                     EnviarEmail(email,"Novo cadastro Moderador HelpMentalHealth",
                         "Parabéns você acaba de´fazer parte da equipe de moderação do HelpMentalHealth!!!\n\n" +
-                        "Acesse seu perfil com nome de login (" + nome + ") ou email (" + email + ") e senha (" + senha + ").");
+                        "Acesse seu perfil com nome de login (" + nome + ") ou email (" + email + ") e senha (" + senha + ").\n" +
+                        "Mude a senha nas configurações para maior segurança!");
                 }
                 else
                 {
