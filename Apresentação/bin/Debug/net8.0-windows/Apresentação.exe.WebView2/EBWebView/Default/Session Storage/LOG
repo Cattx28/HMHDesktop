@@ -1,6 +1,15 @@
-2025/08/12-13:40:44.509 31c Reusing MANIFEST C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
-2025/08/12-13:40:44.511 31c Recovering log #64
-2025/08/12-13:40:44.516 31c Reusing old log C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/000064.log 
-2025/08/12-13:40:59.374 b204 Level-0 table #68: started
-2025/08/12-13:40:59.384 b204 Level-0 table #68: 18299 bytes OK
-2025/08/12-13:40:59.387 b204 Delete type=0 #64
+2025/08/18-20:13:17.498 ad80 Reusing MANIFEST C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
+2025/08/18-20:13:17.503 ad80 Recovering log #67
+2025/08/18-20:13:17.517 ad80 Reusing old log C:\Users\Cat\Desktop\HelpMentalHealth\Apresentação\bin\Debug\net8.0-windows\Apresentação.exe.WebView2\EBWebView\Default\Session Storage/000067.log 
+2025/08/18-20:14:11.335 251c Level-0 table #71: started
+2025/08/18-20:14:11.348 251c Level-0 table #71: 41742 bytes OK
+2025/08/18-20:14:11.358 251c Delete type=0 #67
+2025/08/18-20:14:11.363 ad80 Compacting 4@0 + 1@1 files
+2025/08/18-20:14:11.375 ad80 Generated table #72@0: 612 keys, 51163 bytes
+2025/08/18-20:14:11.376 ad80 Compacted 4@0 + 1@1 files => 51163 bytes
+2025/08/18-20:14:11.380 ad80 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/08/18-20:14:11.381 ad80 Delete type=2 #59
+2025/08/18-20:14:11.382 ad80 Delete type=2 #62
+2025/08/18-20:14:11.382 ad80 Delete type=2 #65
+2025/08/18-20:14:11.382 ad80 Delete type=2 #68
+2025/08/18-20:14:11.382 ad80 Delete type=2 #71

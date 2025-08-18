@@ -11,6 +11,7 @@ namespace Apresentação
     public partial class frmPsicologo : Form
     {
         private readonly PsicologoService _psicologoService;
+        private readonly LogsService _logsService;
         private DataTable tblPsicologo = new DataTable();
 
         private int modo = 0;
@@ -22,6 +23,7 @@ namespace Apresentação
         {
             InitializeComponent();
             _psicologoService = new PsicologoService();
+            _logsService = new LogsService();
 
             ConfiguraDataGridView();
             carregaGridView();
@@ -134,14 +136,6 @@ namespace Apresentação
             }
         }
 
-
-        private void btnAdicionar_Click(object sender, EventArgs e)
-        {
-            modo = 1;
-            Habilita();
-            LimpaForm();
-        }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             modo = 1;
@@ -181,6 +175,9 @@ namespace Apresentação
             psicologo.regiao = regiao;
             psicologo.email = email;
 
+            //Log
+            int idModerador = (int)UsuarioLogado.Id;
+
             //Validator
             if (psicologo != null)
             {
@@ -209,6 +206,8 @@ namespace Apresentação
                 frmModerador moderador = new frmModerador();
                 moderador.EnviarEmail(email, "Sua Conta no HelpMentalHealth foi atualizada", body);
 
+                _logsService.CriarLog(null, idModerador, "Atualização PSICÓLOGO", "Id: " + id + "\n Motivo(s): " + motivo.Motivo);
+
                 msg = "PSICOLOGO atualizado com sucesso!";
                 carregaGridView();
             }
@@ -227,6 +226,8 @@ namespace Apresentação
             string resultado;
             string msg;
 
+            int idModerador = (int)UsuarioLogado.Id;
+
             DialogResult resposta;
             resposta = MessageBox.Show("Confirma exclusão?", "Aviso do sistema!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (resposta == DialogResult.OK)
@@ -239,8 +240,9 @@ namespace Apresentação
                 frmModerador moderador = new frmModerador();
                 moderador.EnviarEmail(txtEmail.Text, "Sua Conta no HelpMentalHealth foi excluída", body);
 
-
                 int.TryParse(txtId.Text, out int id);
+
+                _logsService.CriarLog(null, idModerador, "Exclusão PSICÓLOGO", "Id: " + id + "\n Motivo(s): " + motivo.Motivo);
 
                 resultado = _psicologoService.Delete(id);
 

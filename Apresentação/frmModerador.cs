@@ -16,6 +16,7 @@ namespace Apresentação
     public partial class frmModerador : Form
     {
         private readonly ModeradorService _moderadorService;
+        private readonly LogsService _logsService;
         private DataTable tblModerador = new DataTable();
 
         private int modo = 0;
@@ -27,6 +28,7 @@ namespace Apresentação
         {
             InitializeComponent();
             _moderadorService = new ModeradorService();
+            _logsService = new LogsService();
 
             ConfiguraDataGridView();
             carregaGridView();
@@ -203,6 +205,7 @@ namespace Apresentação
             string senha;
 
             string resultado;
+            //string resultado2;
             string msg;
 
             Moderador moderador = new Moderador();
@@ -220,6 +223,12 @@ namespace Apresentação
             moderador.nome = nome;
             moderador.email = email;
             moderador.senha = senhaHash;
+
+            //Log
+            int idModerador;
+            idModerador = (int)UsuarioLogado.Id;
+
+            
 
             //Validator
             if (moderador != null)
@@ -243,16 +252,17 @@ namespace Apresentação
             {
                 resultado = _moderadorService.Insert(null, nome, email, senhaHash);
 
-
                 if (resultado == "SUCESSO")
                 {
                     msg = "MODERADOR cadastrado com sucesso!";
                     carregaGridView();
 
-                    EnviarEmail(email,"Novo cadastro Moderador HelpMentalHealth",
-                        "Parabéns você acaba de´fazer parte da equipe de moderação do HelpMentalHealth!!!\n\n" +
-                        "Acesse seu perfil com nome de login (" + nome + ") ou email (" + email + ") e senha (" + senha + ").\n" +
-                        "Mude a senha nas configurações para maior segurança!");
+                    EnviarEmail(email, "Novo cadastro Moderador HelpMentalHealth",
+                       "Parabéns você acaba de´fazer parte da equipe de moderação do HelpMentalHealth!!!\n\n" +
+                       "Acesse seu perfil com nome de login (" + nome + ") ou email (" + email + ") e senha (" + senha + ").\n" +
+                       "Mude a senha nas configurações para maior segurança!");
+
+                    _logsService.CriarLog(null, idModerador, "Novo Cadastro MODERADOR", "Email cadastrado: " + email);
                 }
                 else
                 {
@@ -263,6 +273,7 @@ namespace Apresentação
             else if (modo == 2)
             {
                 resultado = _moderadorService.Update(id, nome, email);
+
                 if (resultado == "SUCESSO")
                 {
                     msg = "MODERADOR atualizado com sucesso!";
@@ -274,6 +285,8 @@ namespace Apresentação
                     string? body ="Por motivos de: " + motivo.Motivo;
 
                     EnviarEmail(email,"Atualização de conta Moderador HelpMentalHealth", body);
+
+                    _logsService.CriarLog(null, idModerador, "Atualização MODERADOR", "Id: " + id + "\n Motivo(s): " + motivo.Motivo);
                 }
                 else
                 {
@@ -291,6 +304,8 @@ namespace Apresentação
             string resultado;
             string msg;
 
+            int idModerador = (int)UsuarioLogado.Id;
+
             DialogResult resposta;
             resposta = MessageBox.Show("Confirma exclusão?", "Aviso do sistema!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
@@ -300,9 +315,12 @@ namespace Apresentação
                 frmMotivo motivo = new frmMotivo();
                 motivo.ShowDialog();
                 string? body = "Por motivos de: " + motivo.Motivo;
+
                 EnviarEmail(txtEmail.Text, "Exclusão de conta Moderador HelpMentalHealth", body);
 
                 int.TryParse(txtId.Text, out int id);
+
+                _logsService.CriarLog(null, idModerador, "Exclusão MODERADOR", "Id: " + id + "\n Motivo(s): " + motivo.Motivo);
 
                 resultado = _moderadorService.Delete(id);
 

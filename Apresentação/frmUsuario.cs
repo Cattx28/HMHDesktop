@@ -8,6 +8,8 @@ namespace Apresentação
     public partial class frmUsuario : Form
     {
         private readonly UsuarioService _usuarioService;
+        private readonly LogsService _logsService;
+
         private DataTable tblUsuario = new DataTable();
 
         private int modo = 0;
@@ -19,6 +21,7 @@ namespace Apresentação
         {
             InitializeComponent();
             _usuarioService = new UsuarioService();
+            _logsService = new LogsService();
 
             ConfiguraDataGridView();
             carregaGridView();
@@ -98,7 +101,6 @@ namespace Apresentação
                     grpDados.Enabled = true;
                     dgUsuario.Enabled = false;
                     break;
-          
         }
         }
 
@@ -176,6 +178,9 @@ namespace Apresentação
             usuario.idade = idade;
             usuario.email = email;
 
+            //Logs
+            int idModerador = (int)UsuarioLogado.Id;
+
             //Validator
             if (usuario != null)
             {
@@ -203,6 +208,8 @@ namespace Apresentação
                 frmModerador moderador = new frmModerador();
                 moderador.EnviarEmail(email, "Sua Conta no HelpMentalHealth foi atualizada", body);
 
+                _logsService.CriarLog(null, idModerador, "Atualização USUÁRIO", "Id: " + id + "\n Motivo(s): " + motivo.Motivo);
+
                 msg = "USUÁRIO atualizado com sucesso!";
                     carregaGridView();
                 }
@@ -221,6 +228,9 @@ namespace Apresentação
             string resultado;
             string msg;
 
+            //Logs
+            int idModerador = (int)UsuarioLogado.Id;
+
             DialogResult resposta;
             resposta = MessageBox.Show("Confirma exclusão?", "Aviso do sistema!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
@@ -238,6 +248,8 @@ namespace Apresentação
 
                 frmModerador moderador = new frmModerador();
                 moderador.EnviarEmail(txtEmail.Text, "Sua Conta no HelpMentalHealth foi excluída", body);
+
+                _logsService.CriarLog(null, idModerador, "Exclusão USUÁRIO", "Id: " + id + "\n Motivo(s): " + motivo.Motivo);
 
                 if (resultado == "SUCESSO")
                 {
